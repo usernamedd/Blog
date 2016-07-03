@@ -1,0 +1,54 @@
+﻿
+@{
+    Layout = null;
+}
+@{
+    ViewBag.Title = "这是验证页面";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#trydifferent").click(changeCheckCode);
+        });
+
+        function changeCheckCode() {
+            $("#verificationcode").attr("src", "/Account/CheckCode?" + new Date());
+        }
+    </script>
+</head>
+<body>
+    <div>
+        这是登录页面：
+    </div>
+    <div>
+        <form action="Login" method="post">
+            <div>
+                <input name="username" />
+            </div>
+            <div>
+                <input name="password" />
+            </div>
+            <div>
+                <input name="VerificationCode"/><img id="verificationcode" alt="验证码" src="@Url.Action("CheckCode", "Account")"/>
+                <a id="trydifferent" style="cursor: pointer">换一张</a>
+            </div>
+            <div>
+                <input type="submit" value="提交" />
+            </div>
+        </form>
+            @if (ViewBag.VerificationErrorMessage != null)
+            {
+                <div style="color:red;">
+                    @ViewBag.VerificationErrorMessage;
+                </div>
+            }
+    </div>
+</body>
+</html>

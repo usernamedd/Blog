@@ -1,0 +1,39 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CategoryMgr</title>
+    <link href="~/CSS/bootstrap/bootstrap.min.css" type="text/css"/>
+</head>
+<body>
+    <div>
+        <h4>category</h4>
+        <hr />
+        <table class="table-bordered">
+            @if (ViewBag.Categorys != null)
+            {
+                foreach (var c in ViewBag.Categorys)
+                {
+                    <caption>c.title;</caption>
+                }
+            }
+        </table>
+        <div class="nav-divider">
+            <form class="form-group" action="CreateCategory" method="post">
+                <legend>标签名称</legend>
+                <input type="text" placeholder=请输入文字…" name="title"/>
+                <button type="submit" class="btn">注册</button>
+            </form>
+        </div>
+    </div>
+    <p>
+    </p>
+</body>
+</html>

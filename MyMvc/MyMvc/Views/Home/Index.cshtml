@@ -1,0 +1,42 @@
+﻿@model  MyMvc.Models.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @{
+            if (Model != null)
+            {
+                <h3>欢迎 @Model.username</h3>
+            }
+        }
+    </div>
+    <div>
+        这是主页
+        <a href="/Account/Register">去注册ViewBag.Register</a>
+    </div>
+    <div>
+        @{
+            if (Model != null)
+            {
+                <a href="/Account/LoginOut">退出</a>
+            }
+        }
+        
+    </div>
+    <div>
+        <a href="/Account/Login">去登录</a>
+    </div>
+    <div>
+        <a href="/Category/CategoryMgr">文章分类管理</a>
+    </div>
+</body>
+</html>

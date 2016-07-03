@@ -1,0 +1,15 @@
+F:\计算机\Asp.net\MVC\Code Source\aspnet mvc5.2.3\src\System.Web.Mvc\obj\Debug\System.Web.Mvc.csprojResolveAssemblyReference.cache
+F:\计算机\Asp.net\MVC\Code Source\aspnet mvc5.2.3\src\System.Web.Mvc\obj\Debug\System.Web.Mvc.Properties.MvcResources.resources
+F:\计算机\Asp.net\MVC\Code Source\aspnet mvc5.2.3\src\System.Web.Mvc\obj\Debug\System.Web.Mvc.csproj.GenerateResource.Cache
+F:\VS工程\博客系统\Local\MVC\System.Web.Mvc\obj\Debug\System.Web.Mvc.csprojResolveAssemblyReference.cache
+F:\VS工程\博客系统\Local\MVC\System.Web.Mvc\obj\Debug\System.Web.Mvc.Properties.MvcResources.resources
+F:\VS工程\博客系统\Local\MVC\System.Web.Mvc\obj\Debug\System.Web.Mvc.csproj.GenerateResource.Cache
+F:\VS工程\博客系统\Local\MVC\bin\Debug\System.Web.Mvc.xml
+F:\VS工程\博客系统\Local\MyMvc\MyMvc\bin\System.Web.Mvc.dll
+F:\VS工程\博客系统\Local\MyMvc\MyMvc\bin\System.Web.Mvc.pdb
+F:\VS工程\博客系统\Local\MyMvc\MyMvc\bin\System.Web.Mvc.xml
+F:\VS工程\博客系统\Local\MVC\System.Web.Mvc\obj\Debug\System.Web.Mvc.dll
+F:\VS工程\博客系统\Local\MVC\System.Web.Mvc\obj\Debug\System.Web.Mvc.pdb
+F:\VS工程\博客系统\Local\MVC\Debug\bin\System.Web.Mvc.dll
+F:\VS工程\博客系统\Local\MVC\Debug\bin\System.Web.Mvc.pdb
+F:\VS工程\博客系统\Local\MVC\Debug\bin\System.Web.Mvc.xml

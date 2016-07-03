@@ -1,0 +1,2778 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Web.Mvc</name>
+    </assembly>
+    <members>
+        <member name="T:System.ComponentModel.AttributeList">
+            <summary>
+            Wrapper for AttributeCollection to provide generic collection implementation.
+            </summary>
+        </member>
+        <member name="T:System.Collections.Generic.DictionaryExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.DictionaryExtensions.RemoveFromDictionary``2(System.Collections.Generic.IDictionary{``0,``1},System.Func{System.Collections.Generic.KeyValuePair{``0,``1},System.Boolean})">
+            <summary>
+            Remove entries from dictionary that match the removeCondition.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.DictionaryExtensions.RemoveFromDictionary``3(System.Collections.Generic.IDictionary{``0,``1},System.Func{System.Collections.Generic.KeyValuePair{``0,``1},``2,System.Boolean},``2)">
+            <summary>
+            Remove entries from dictionary that match the removeCondition.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.DictionaryExtensions.TryGetValue``1(System.Collections.Generic.IDictionary{System.String,System.Object},System.String,``0@)">
+            <summary>
+            Gets the value of <typeparamref name="T"/> associated with the specified key or <c>default</c> value if
+            either the key is not present or the value is not of type <typeparamref name="T"/>. 
+            </summary>
+            <typeparam name="T">The type of the value associated with the specified key.</typeparam>
+            <param name="collection">The <see cref="T:System.Collections.Generic.IDictionary`2"/> instance where <c>TValue</c> is <c>object</c>.</param>
+            <param name="key">The key whose value to get.</param>
+            <param name="value">When this method returns, the value associated with the specified key, if the key is found; otherwise, the default value for the type of the value parameter.</param>
+            <returns><c>true</c> if key was found, value is non-null, and value is of type <typeparamref name="T"/>; otherwise false.</returns>
+        </member>
+        <member name="T:System.Collections.ObjectModel.ListWrapperCollection`1">
+            <summary>
+            A class that inherits from Collection of T but also exposes its underlying data as List of T for performance.
+            </summary>
+        </member>
+        <member name="T:System.Web.PrefixContainer">
+            <summary>
+            This is a container for prefix values. It normalizes all the values into dotted-form and then stores
+            them in a sorted array. All queries for prefixes are also normalized to dotted-form, and searches
+            for ContainsPrefix are done with a binary search.
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.DirectRouteBuilder">
+            <summary>Represents a builder that creates direct routes to actions (attribute routes).</summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteBuilder.#ctor(System.Collections.Generic.IReadOnlyCollection{System.Web.Mvc.ActionDescriptor},System.Boolean)">
+            <summary>Initializes a new instance of the <see cref="T:System.Web.Mvc.Routing.DirectRouteBuilder"/> class.</summary>
+            <param name="actions">The action descriptors to which to create a route.</param>
+            <param name="targetIsAction">
+            A value indicating whether the route is configured at the action or controller level.
+            </param>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteBuilder.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteBuilder.Template">
+            <inheritdoc/>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteBuilder.Defaults">
+            <inheritdoc/>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteBuilder.Constraints">
+            <inheritdoc/>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteBuilder.DataTokens">
+            <inheritdoc/>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteBuilder.Order">
+            <inheritdoc/>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteBuilder.Precedence">
+            <inheritdoc/>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteBuilder.Actions">
+            <inheritdoc/>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteBuilder.TargetIsAction">
+            <inheritdoc/>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteBuilder.Build">
+            <inheritdoc/>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.DirectRouteFactoryContext">
+            <summary>Represents a context that supports creating a direct route.</summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteFactoryContext.#ctor(System.String,System.String,System.Collections.Generic.IReadOnlyCollection{System.Web.Mvc.ActionDescriptor},System.Web.Mvc.Routing.IInlineConstraintResolver,System.Boolean)">
+            <summary>Initializes a new instance of the <see cref="T:System.Web.Mvc.Routing.DirectRouteFactoryContext"/></summary>
+            <param name="areaPrefix">The route prefix, if any, defined by the area.</param>
+            <param name="controllerPrefix">The route prefix, if any, defined by the controller.</param>
+            <param name="actions">The action descriptors to which to create a route.</param>
+            <param name="inlineConstraintResolver">The inline constraint resolver.</param>
+            <param name="targetIsAction">
+            A value indicating whether the route is configured at the action or controller level.
+            </param>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteFactoryContext.AreaPrefix">
+            <summary>Gets the route prefix, if any, defined by the area.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteFactoryContext.ControllerPrefix">
+            <summary>Gets the route prefix, if any, defined by the controller.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteFactoryContext.Actions">
+            <summary>Gets the action descriptors to which to create a route.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteFactoryContext.InlineConstraintResolver">
+            <summary>Gets the inline constraint resolver.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DirectRouteFactoryContext.TargetIsAction">
+            <summary>
+            Gets a value indicating whether the route is configured at the action or controller level.
+            </summary>
+            <remarks>
+            <see langword="true"/> when the route is configured at the action level; otherwise <see langword="false"/>
+            (if the route is configured at the controller level).
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteFactoryContext.CreateBuilder(System.String)">
+            <summary>Creates a route builder that can build a route matching this context.</summary>
+            <param name="template">The route template.</param>
+            <returns>A route builder that can build a route matching this context.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteFactoryContext.CreateBuilder(System.String,System.Web.Mvc.Routing.IInlineConstraintResolver)">
+            <summary>Creates a route builder that can build a route matching this context.</summary>
+            <param name="template">The route template.</param>
+            <param name="constraintResolver">
+            The inline constraint resolver to use, if any; otherwise, <see langword="null"/>.
+            </param>
+            <returns>A route builder that can build a route matching this context.</returns>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.IDirectRouteBuilder">
+            <summary>Defines a builder that creates direct routes to actions (attribute routes).</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.IDirectRouteBuilder.Name">
+            <summary>Gets or sets the route name, if any; otherwise <see langword="null"/>.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.IDirectRouteBuilder.Template">
+            <summary>Gets or sets the route template.</summary>
+            <remarks>
+            This value is the core route template that remains after resolving and removing any inline constraints.
+            </remarks>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.IDirectRouteBuilder.Defaults">
+            <summary>Gets or sets the route defaults.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.IDirectRouteBuilder.Constraints">
+            <summary>Gets or sets the route constraints.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.IDirectRouteBuilder.DataTokens">
+            <summary>Gets or sets the route data tokens.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.IDirectRouteBuilder.Order">
+            <summary>Gets or sets the route order.</summary>
+            <remarks>
+            The route order disambiguates multiple matching routes and overrides precedence.
+            The intended use of order is for an explicitly provided precedence override value.
+            </remarks>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.IDirectRouteBuilder.Precedence">
+            <summary>Gets or sets the route precedence.</summary>
+            <remarks>
+            The route order disambiguates multiple matching routes with the same order.
+            The intended use of precedence is for default, automatically computed disambiguation based on inline
+            constraint types.
+            </remarks>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.IDirectRouteBuilder.Actions">
+            <summary>Gets the action descriptors to which to create a route.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.IDirectRouteBuilder.TargetIsAction">
+            <summary>
+            Gets a value indicating whether the route is configured at the action or controller level.
+            </summary>
+            <remarks>
+            <see langword="true"/> when the route is configured at the action level; otherwise <see langword="false"/>
+            (if the route is configured at the controller level).
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.IDirectRouteBuilder.Build">
+            <summary>Creates a route entry based on the current property values.</summary>
+            <returns>The route entry created.</returns>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.IDirectRouteFactory">
+            <summary>
+            Defines a factory that creates a route directly to a set of action descriptors (an attribute route).
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.IDirectRouteFactory.CreateRoute(System.Web.Mvc.Routing.DirectRouteFactoryContext)">
+            <summary>Creates a direct route entry.</summary>
+            <param name="context">The context to use to create the route.</param>
+            <returns>The direct route entry.</returns>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.IInlineConstraintResolver">
+            <summary>
+            Defines an abstraction for resolving inline constraints as instances of <see cref="T:System.Web.Routing.IRouteConstraint"/>.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.IInlineConstraintResolver.ResolveConstraint(System.String)">
+            <summary>
+            Resolves the inline constraint.
+            </summary>
+            <param name="inlineConstraint">The inline constraint to resolve.</param>
+            <returns>The <see cref="T:System.Web.Routing.IRouteConstraint"/> the inline constraint was resolved to.</returns>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.RouteEntry">
+            <summary>Represents a named route.</summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.RouteEntry.#ctor(System.String,System.Web.Routing.Route)">
+            <summary>Initializes a new instance of the <see cref="T:System.Web.Mvc.Routing.RouteEntry"/> class.</summary>
+            <param name="name">The route name, if any; otherwise, <see langword="null"/>.</param>
+            <param name="route">The route.</param>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.RouteEntry.Name">
+            <summary>Gets the route name, if any; otherwise, <see langword="null"/>.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.RouteEntry.Route">
+            <summary>Gets the route.</summary>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.RouteFactoryAttribute">
+            <summary>Represents an attribute route that may contain custom constraints.</summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.RouteFactoryAttribute.#ctor(System.String)">
+            <summary>Initializes a new instance of the <see cref="T:System.Web.Mvc.Routing.RouteFactoryAttribute"/> class.</summary>
+            <param name="template">The route template.</param>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.RouteFactoryAttribute.Template">
+            <summary>Gets the route template.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.RouteFactoryAttribute.Name">
+            <summary>Gets or sets the route name, if any; otherwise <see langword="null"/>.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.RouteFactoryAttribute.Order">
+            <summary>Gets or sets the route order.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.RouteFactoryAttribute.Defaults">
+            <summary>Gets the route defaults, if any; otherwise <see langword="null"/>.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.RouteFactoryAttribute.Constraints">
+            <summary>Gets the route constraints, if any; otherwise <see langword="null"/>.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.RouteFactoryAttribute.DataTokens">
+            <summary>Gets the route data tokens, if any; otherwise <see langword="null"/>.</summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.RouteFactoryAttribute.CreateRoute(System.Web.Mvc.Routing.DirectRouteFactoryContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.RouteInfoDirectRouteFactory">
+            <remarks>
+            This class is an adapter that turns an IHttpRouteInfoProvider into an IDirectRouteFactory. We need it because
+            we already shipped IHttpRouteInfoProvider but want to standardize the internal implementation around the more
+            general IDirectRouteFactory interface.
+            We can remove this class if we ever stop supporting custom attributes that implement IHttpRouteInfoProvider.
+            </remarks>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.AlphaRouteConstraint">
+            <summary>
+            Constrains a route parameter to contain only lowercase or uppercase letters A through Z in the English alphabet.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.AlphaRouteConstraint.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.Routing.Constraints.AlphaRouteConstraint" /> class.
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.BoolRouteConstraint">
+            <summary>
+            Constrains a route parameter to represent only Boolean values.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.BoolRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.CompoundRouteConstraint">
+            <summary>
+            Constrains a route by several child constraints.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.CompoundRouteConstraint.#ctor(System.Collections.Generic.IList{System.Web.Routing.IRouteConstraint})">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.Routing.Constraints.CompoundRouteConstraint" /> class.
+            </summary>
+            <param name="constraints">The child constraints that must match for this constraint to match.</param>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.Constraints.CompoundRouteConstraint.Constraints">
+            <summary>
+            Gets the child constraints that must match for this constraint to match.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.CompoundRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.DateTimeRouteConstraint">
+            <summary>
+            Constrains a route parameter to represent only <see cref="T:System.DateTime"/> values.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.DateTimeRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.DecimalRouteConstraint">
+            <summary>
+            Constrains a route parameter to represent only decimal values.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.DecimalRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.DoubleRouteConstraint">
+            <summary>
+            Constrains a route parameter to represent only 64-bit floating-point values.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.DoubleRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.FloatRouteConstraint">
+            <summary>
+            Constrains a route parameter to represent only 32-bit floating-point values.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.FloatRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.GuidRouteConstraint">
+            <summary>
+            Constrains a route parameter to represent only <see cref="T:System.Guid"/> values.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.GuidRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.IntRouteConstraint">
+            <summary>
+            Constrains a route parameter to represent only 32-bit integer values.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.IntRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.LengthRouteConstraint">
+            <summary>
+            Constrains a route parameter to be a string of a given length or within a given range of lengths.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.LengthRouteConstraint.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.Routing.Constraints.LengthRouteConstraint" /> class that constrains
+            a route parameter to be a string of a given length.
+            </summary>
+            <param name="minLength">The minimum length of the route parameter.</param>
+            <param name="maxLength">The maximum length of the route parameter.</param>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.Constraints.LengthRouteConstraint.Length">
+            <summary>
+            Gets the length of the route parameter, if one is set.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.Constraints.LengthRouteConstraint.MinLength">
+            <summary>
+            Gets the minimum length of the route parameter, if one is set.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.Constraints.LengthRouteConstraint.MaxLength">
+            <summary>
+            Gets the maximum length of the route parameter, if one is set.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.LengthRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.LongRouteConstraint">
+            <summary>
+            Constrains a route parameter to represent only 64-bit integer values.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.LongRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.MaxLengthRouteConstraint">
+            <summary>
+            Constrains a route parameter to be a string with a maximum length.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.Constraints.MaxLengthRouteConstraint.MaxLength">
+            <summary>
+            Gets the maximum length of the route parameter.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.MaxLengthRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.MaxRouteConstraint">
+            <summary>
+            Constrains a route parameter to be an integer with a maximum value.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.Constraints.MaxRouteConstraint.Max">
+            <summary>
+            Gets the maximum value of the route parameter.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.MaxRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.MinLengthRouteConstraint">
+            <summary>
+            Constrains a route parameter to be a string with a maximum length.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.Constraints.MinLengthRouteConstraint.MinLength">
+            <summary>
+            Gets the minimum length of the route parameter.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.MinLengthRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.MinRouteConstraint">
+            <summary>
+            Constrains a route parameter to be a long with a minimum value.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.Constraints.MinRouteConstraint.Min">
+            <summary>
+            Gets the minimum value of the route parameter.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.MinRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.RangeRouteConstraint">
+            <summary>
+            Constraints a route parameter to be an integer within a given range of values.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.Constraints.RangeRouteConstraint.Min">
+            <summary>
+            Gets the minimum value of the route parameter.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.Constraints.RangeRouteConstraint.Max">
+            <summary>
+            Gets the maximum value of the route parameter.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.RangeRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.RegexRouteConstraint">
+            <summary>
+            Constrains a route parameter to match a regular expression.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.Constraints.RegexRouteConstraint.Pattern">
+            <summary>
+            Gets the regular expression pattern to match.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.RegexRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.Constraints.OptionalRouteConstraint">
+            <summary>
+            Constrains a route by an inner constraint that doesn't fail when an optional parameter is set to its default value.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.OptionalRouteConstraint.#ctor(System.Web.Routing.IRouteConstraint)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.Routing.Constraints.OptionalRouteConstraint" /> class.
+            </summary>
+            <param name="innerConstraint">The inner constraint to match if the parameter is not an optional parameter without a value</param>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.Constraints.OptionalRouteConstraint.InnerConstraint">
+            <summary>
+            Gets the inner constraint to match if the parameter is not an optional parameter without a value.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.Constraints.OptionalRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.DefaultInlineConstraintResolver">
+            <summary>
+            The default implementation of <see cref="T:System.Web.Mvc.Routing.IInlineConstraintResolver"/>. Resolves constraints by parsing
+            a constraint key and constraint arguments, using a map to resolve the constraint type, and calling an
+            appropriate constructor for the constraint type.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.DefaultInlineConstraintResolver.ConstraintMap">
+            <summary>
+            Gets the mutable dictionary that maps constraint keys to a particular constraint type.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DefaultInlineConstraintResolver.ResolveConstraint(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.Routing.InlineRouteTemplateParser">
+            <summary>
+            This class is used by the AttributeRouting mapper, during configuration,
+            to parse and strip defaults and constraints from the template.
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.SubRouteCollection">
+            <summary>Represents a collection of route entries and the routes they contain.</summary>
+            <remarks>
+            This is used in attribute routing, where we want to match multiple routes, and then later
+            disambiguate which one is best.
+            </remarks>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.IRoutePrefix">
+            <summary>Defines a route prefix.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.IRoutePrefix.Prefix">
+            <summary>Gets the route prefix.</summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DefaultDirectRouteProvider.GetDirectRoutes(System.Web.Mvc.ControllerDescriptor,System.Collections.Generic.IReadOnlyList{System.Web.Mvc.ActionDescriptor},System.Web.Mvc.Routing.IInlineConstraintResolver)">
+            <summary>
+            Gets direct routes for the given controller descriptor and action descriptors based on 
+            <see cref="T:System.Web.Mvc.Routing.IDirectRouteFactory"/> attributes.
+            </summary>
+            <param name="controllerDescriptor">The controller descriptor.</param>
+            <param name="actionDescriptors">The action descriptors for all actions.</param>
+            <param name="constraintResolver">The constraint resolver.</param>
+            <returns>A set of route entries.</returns>
+            <remarks>
+            The implementation returns route entries for the given controller and actions. 
+            
+            Any actions that have associated <see cref="T:System.Web.Mvc.Routing.IDirectRouteFactory"/> instances will produce route
+            entries that route direct to those actions.
+            
+            Any actions that do not have an associated <see cref="T:System.Web.Mvc.Routing.IDirectRouteFactory"/> instances will be
+            associated with the controller. If the controller has any associated <see cref="T:System.Web.Mvc.Routing.IDirectRouteProvider"/>
+            instances, then route entries will be created for the controller and associated actions.
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DefaultDirectRouteProvider.GetControllerRouteFactories(System.Web.Mvc.ControllerDescriptor)">
+            <summary>
+            Gets route factories for the given controller descriptor.
+            </summary>
+            <param name="controllerDescriptor">The controller descriptor.</param>
+            <returns>A set of route factories.</returns>
+            <remarks>
+            The implementation returns <see cref="T:System.Web.Mvc.Routing.IDirectRouteFactory"/> instances based on attributes on the controller.
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DefaultDirectRouteProvider.GetActionRouteFactories(System.Web.Mvc.ActionDescriptor)">
+            <summary>
+            Gets a set of route factories for the given action descriptor.
+            </summary>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <returns>A set of route factories.</returns>
+            <remarks>
+            The implementation returns <see cref="T:System.Web.Mvc.Routing.IDirectRouteFactory"/> instances based on attributes on the action. Returns
+            null if the action was defined on a base class of this controller.
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DefaultDirectRouteProvider.GetControllerDirectRoutes(System.Web.Mvc.ControllerDescriptor,System.Collections.Generic.IReadOnlyList{System.Web.Mvc.ActionDescriptor},System.Collections.Generic.IReadOnlyList{System.Web.Mvc.Routing.IDirectRouteFactory},System.Web.Mvc.Routing.IInlineConstraintResolver)">
+            <summary>
+            Creates <see cref="T:System.Web.Mvc.Routing.RouteEntry"/> instances based on the provided factories, controller and actions. The route
+            entries provided direct routing to the provided controller and can reach the set of provided actions.
+            </summary>
+            <param name="controllerDescriptor">The controller descriptor.</param>
+            <param name="actionDescriptors">The action descriptors.</param>
+            <param name="factories">The direct route factories.</param>
+            <param name="constraintResolver">The constraint resolver.</param>
+            <returns>A set of route entries.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DefaultDirectRouteProvider.GetActionDirectRoutes(System.Web.Mvc.ActionDescriptor,System.Collections.Generic.IReadOnlyList{System.Web.Mvc.Routing.IDirectRouteFactory},System.Web.Mvc.Routing.IInlineConstraintResolver)">
+            <summary>
+            Creates <see cref="T:System.Web.Mvc.Routing.RouteEntry"/> instances based on the provided factories and action. The route entries
+            provide direct routing to the provided action.
+            </summary>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <param name="factories">The direct route factories.</param>
+            <param name="constraintResolver">The constraint resolver.</param>
+            <returns>A set of route entries.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DefaultDirectRouteProvider.GetRoutePrefix(System.Web.Mvc.ControllerDescriptor)">
+            <summary>
+            Gets the route prefix from the provided controller.
+            </summary>
+            <param name="controllerDescriptor">The controller descriptor.</param>
+            <returns>The route prefix or null.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DefaultDirectRouteProvider.GetAreaPrefix(System.Web.Mvc.ControllerDescriptor)">
+            <summary>
+            Gets the area prefix from the provided controller.
+            </summary>
+            <param name="controllerDescriptor">The controller descriptor.</param>
+            <returns>The area prefix or null.</returns>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.IDirectRouteProvider">
+            <summary>
+            Defines a provider for routes that directly target action descriptors (attribute routes).
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.IDirectRouteProvider.GetDirectRoutes(System.Web.Mvc.ControllerDescriptor,System.Collections.Generic.IReadOnlyList{System.Web.Mvc.ActionDescriptor},System.Web.Mvc.Routing.IInlineConstraintResolver)">
+            <summary>Gets the direct routes for a controller.</summary>
+            <param name="controllerDescriptor">The controller descriptor.</param>
+            <param name="actionDescriptors">The action descriptors.</param>
+            <param name="constraintResolver">The inline constraint resolver.</param>
+            <returns>A set of route entries for the controller.</returns>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.ConstraintValidation">
+            <summary>
+            Validates that the constraints on a Route are of a type that can be processed by <see cref="T:System.Web.Routing.Route" />.
+            </summary>
+            <remarks>
+            This validation is only applicable when the <see cref="T:System.Web.Routing.Route" /> is one that we created. A user-defined
+            type that is derived from <see cref="T:System.Web.Routing.RouteBase" /> may have different semantics.
+            
+            The logic here is duplicated from System.Web, but we need it to validate correctness of routes on startup. Since we can't 
+            change System.Web, this just lives in a static class for MVC.
+            </remarks>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.DirectRouteCandidate">
+            <summary>
+            Represents a candidate action found via a direct route.
+            </summary>
+            <remarks>
+            Members are get/set for testability of the 'best-match' algorithm.
+            </remarks>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.LinkGenerationRoute">
+            <summary>
+            Adapts a named direct route into a top-level entry in the route table that can only be used
+            for generating a link (GetVirtualPath). We use these because the subroutes produced by direct
+            routing, don't go into the main collection and so can't be matched by name.
+            </summary>
+            <remarks>
+            Parallel to the Web API implementation of attribute routing in System.Web.Http.Routing.LinkGenerationRoute.
+            </remarks>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.RouteCollectionRoute">
+            <summary>
+            A single route that is the composite of multiple "sub routes".  
+            </summary>
+            <remarks>
+            Corresponds to the Web API implementation of attribute routing in System.Web.Http.Routing.RouteCollectionRoute.
+            </remarks>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.AttributeRoutingMapper">
+            <remarks>
+            Corresponds to the Web API implementation of attribute routing in
+            System.Web.Http.Routing.AttributeRoutingMapper.
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.AttributeRoutingMapper.MapAttributeRoutes(System.Web.Routing.RouteCollection,System.Web.Mvc.Routing.IInlineConstraintResolver)">
+            <summary>
+            Maps the attribute-defined routes for the application.
+            </summary>
+            <param name="routes">The route collection.</param>
+            <param name="constraintResolver">
+            The <see cref="T:System.Web.Mvc.Routing.IInlineConstraintResolver"/> to use for resolving inline constraints in route templates.
+            </param>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.AttributeRoutingMapper.MapAttributeRoutes(System.Web.Routing.RouteCollection,System.Web.Mvc.Routing.IInlineConstraintResolver,System.Web.Mvc.Routing.IDirectRouteProvider)">
+            <summary>
+            Maps the attribute-defined routes for the application.
+            </summary>
+            <param name="routes">The route collection.</param>
+            <param name="constraintResolver">
+            The <see cref="T:System.Web.Mvc.Routing.IInlineConstraintResolver"/> to use for resolving inline constraints in route templates.
+            </param>
+            <param name="directRouteProvider">
+            The <see cref="T:System.Web.Mvc.Routing.IDirectRouteProvider"/> to use for mapping routes from controller types.
+            </param>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.AttributeRoutingMapper.MapAttributeRoutes(System.Web.Routing.RouteCollection,System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>
+            Maps the attribute-defined routes for the application.
+            </summary>
+            <param name="routes">The route collection.</param>
+            <param name="controllerTypes">The controller types to scan.</param>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.AttributeRoutingMapper.MapAttributeRoutes(System.Web.Routing.RouteCollection,System.Collections.Generic.IEnumerable{System.Type},System.Web.Mvc.Routing.IInlineConstraintResolver)">
+            <summary>
+            Maps the attribute-defined routes for the application.
+            </summary>
+            <param name="routes">The route collection.</param>
+            <param name="controllerTypes">The controller types to scan.</param>
+            <param name="constraintResolver">
+            The <see cref="T:System.Web.Mvc.Routing.IInlineConstraintResolver"/> to use for resolving inline constraints in route templates.
+            </param>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.AttributeRoutingMapper.MapAttributeRoutes(System.Web.Routing.RouteCollection,System.Collections.Generic.IEnumerable{System.Type},System.Web.Mvc.Routing.IInlineConstraintResolver,System.Web.Mvc.Routing.IDirectRouteProvider)">
+            <summary>
+            Maps the attribute-defined routes for the application.
+            </summary>
+            <param name="routes">The route collection.</param>
+            <param name="controllerTypes">The controller types to scan.</param>
+            <param name="constraintResolver">
+            The <see cref="T:System.Web.Mvc.Routing.IInlineConstraintResolver"/> to use for resolving inline constraints in route templates.
+            </param>
+            <param name="directRouteProvider">
+            The <see cref="T:System.Web.Mvc.Routing.IDirectRouteProvider"/> to use for mapping routes from controller types.
+            </param>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.GetPrecedence(System.Web.Routing.RouteData)">
+            <summary>
+            Gets the precedence or this route.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.GetPrecedence(System.Web.Routing.Route)">
+            <summary>
+            Gets the precedence or this route.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.SetPrecedence(System.Web.Routing.Route,System.Decimal)">
+            <summary>
+            Sets the precedence of this Route.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.GetOrder(System.Web.Routing.RouteData)">
+            <summary>
+            Gets the order or this route.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.GetOrder(System.Web.Routing.Route)">
+            <summary>
+            Gets the order or this route.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.SetOrder(System.Web.Routing.Route,System.Int32)">
+            <summary>
+            Sets the order of this Route.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.GetTargetIsAction(System.Web.Routing.RouteData)">
+            <summary>
+            Gets a value indicating whether or not the route is a direct route to an action.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.GetTargetIsAction(System.Web.Routing.Route)">
+            <summary>
+            Gets a value indicating whether or not the route is a direct route to an action.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.SetTargetIsAction(System.Web.Routing.Route,System.Boolean)">
+            <summary>
+            Sets a value indicating whether or not the route is a direct route to an action.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.GetTargetControllerDescriptor(System.Web.Routing.Route)">
+            <summary>
+            Gets the ControllerDescriptor that matches this Route.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.GetTargetControllerDescriptor(System.Web.Routing.RouteData)">
+            <summary>
+            Gets the ControllerDescriptor that matches this Route.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.GetTargetActionDescriptors(System.Web.Routing.RouteData)">
+            <summary>
+            Gets the target actions that can be matched if this route is matched.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.GetTargetActionDescriptors(System.Web.Routing.Route)">
+            <summary>
+            Gets the target actions that can be matched if this route is matched.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.DirectRouteExtensions.SetTargetActionDescriptors(System.Web.Routing.Route,System.Web.Mvc.ActionDescriptor[])">
+            <summary>
+            Sets the target actions that can be matched if this route is matched.
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.IRouteInfoProvider">
+            <summary>
+            Provides information for building a <see cref="T:System.Web.Routing.Route"/>.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.IRouteInfoProvider.Name">
+            <summary>
+            Gets the name of the route to generate.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Routing.IRouteInfoProvider.Template">
+            <summary>
+            Gets the route template describing the URI pattern to match against.
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.Routing.RouteBuilder">
+            <summary>
+            Obsolete, use <see cref="T:System.Web.Mvc.Routing.RouteFactoryAttribute"/> to customize generated attribute
+            routes.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.RouteBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.Routing.RouteBuilder" /> class using the default inline constraint resolver.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.RouteBuilder.#ctor(System.Web.Mvc.Routing.IInlineConstraintResolver)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.Routing.RouteBuilder" /> class.
+            </summary>
+            <param name="constraintResolver">The <see cref="T:System.Web.Mvc.Routing.IInlineConstraintResolver"/> to use for resolving inline constraints.</param>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.RouteBuilder.BuildDirectRoute(System.String,System.Web.Mvc.ControllerDescriptor)">
+            <summary>
+            Builds an <see cref="T:System.Web.Routing.Route"/> for a particular controller.
+            </summary>
+            <param name="routeTemplate">The tokenized route template for the route.</param>
+            <param name="controllerDescriptor">The controller the route attribute has been applied on.</param>
+            <returns>The generated <see cref="T:System.Web.Routing.Route"/>.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.RouteBuilder.BuildDirectRoute(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Reflection.MethodInfo,System.String)">
+            <summary>
+            Builds an <see cref="T:System.Web.Routing.Route"/> for a particular action.
+            </summary>
+            <param name="routeTemplate">The tokenized route template for the route.</param>
+            <param name="allowedMethods">The HTTP methods supported by the route. A null value specify that all possible methods are supported.</param>
+            <param name="controllerName">The name of the associated controller.</param>
+            <param name="actionName">The name of the associated action.</param>
+            <param name="targetMethod">The method that the route attribute has been applied on.</param>
+            <param name="areaName"></param>
+            <returns>The generated <see cref="T:System.Web.Routing.Route"/>.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Routing.RouteBuilder.BuildDirectRoute(System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.String,System.Reflection.MethodInfo)">
+            <summary>
+            Builds an <see cref="T:System.Web.Routing.Route"/>.
+            </summary>
+            <param name="defaults">The route defaults.</param>
+            <param name="constraints">The route constraints.</param>
+            <param name="dataTokens"></param>
+            <param name="routeTemplate">The detokenized route template.</param>
+            <param name="targetMethod">The method that the route attribute has been applied on.</param>
+            <returns>The generated <see cref="T:System.Web.Routing.Route"/>.</returns>
+        </member>
+        <member name="P:System.Web.Mvc.ActionMethodSelectorBase.ActionMethods">
+            <summary>
+            All action methods.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.ActionMethodSelectorBase.StandardRouteMethods">
+            <summary>
+            Methods with no direct route, reachable via standard routing only
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.ActionMethodSelectorBase.AliasedMethods">
+            <summary>
+            Methods which have ActionNameSelectorAttributes - these methods have dynamic functionality
+            and might choose to opt-in to any request.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.ActionMethodSelectorBase.NonAliasedMethods">
+            <summary>
+            Methods which do not have ActionNameSelectorAttributes - these are selected statically by name.
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.AreaReference">
+            <summary>
+            Controls interpretation of a controller name when constructing a <see cref="T:System.Web.Mvc.RemoteAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.AreaReference.UseCurrent">
+            <summary>
+            Find the controller in the current area.
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.AreaReference.UseRoot">
+            <summary>
+            Find the controller in the root area.
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.Async.IAsyncActionInvokerFactory">
+            <summary>
+            Used to create an <see cref="T:System.Web.Mvc.Async.IAsyncActionInvoker"/> instance for the current request.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Async.IAsyncActionInvokerFactory.CreateInstance">
+            <summary>
+            Creates an instance of async action invoker for the current request.
+            </summary>
+            <returns>The created <see cref="T:System.Web.Mvc.Async.IAsyncActionInvoker"/>.</returns>
+        </member>
+        <member name="T:System.Web.Mvc.Async.TaskAsyncActionDescriptor">
+            <summary>
+            When an action method returns either Task or Task{T} the TaskAsyncActionDescriptor provides information about the action.
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.Async.TaskAsyncActionDescriptor._taskValueExtractors">
+            <summary>
+            dictionary to hold methods that can read Task{T}.Result
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.Async.TaskWrapperAsyncResult">
+            <summary>
+            Wraps a <see cref="P:System.Web.Mvc.Async.TaskWrapperAsyncResult.Task"/> class, optionally overriding the State object (since the Task Asynchronous Pattern doesn't normally use it).
+            Copied from System.Web.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Async.TaskWrapperAsyncResult.CleanupThunk">
+            <summary>
+            Cleanup logic to run after Task is finished
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Async.TaskWrapperAsyncResult.CompletedSynchronously">
+            <summary>
+            Gets a value indicating whether the asynchronous operation completed synchronously.
+            </summary>
+            <returns>true if the asynchronous operation completed synchronously; otherwise, false.</returns>
+        </member>
+        <member name="F:System.Web.Mvc.Async.AsyncManager._timeout">
+            <summary>
+            default timeout is 45 sec
+            </summary>
+            <remarks>
+            from: http://msdn.microsoft.com/en-us/library/system.web.ui.page.asynctimeout.aspx
+            </remarks>
+        </member>
+        <member name="P:System.Web.Mvc.Async.AsyncManager.Timeout">
+            <summary>
+            Measured in milliseconds, Timeout.Infinite means 'no timeout'
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Async.AsyncManager.Finish">
+            <summary>
+            The developer may call this function to signal that all operations are complete instead of
+            waiting for the operation counter to reach zero.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Async.AsyncManager.Sync(System.Action)">
+            <summary>
+            Executes a callback in the current synchronization context, which gives access to HttpContext and related items.
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:System.Web.Mvc.Async.ReflectedAsyncControllerDescriptor.AllowLegacyAsyncActions(System.Type)">
+            <summary>
+            Determines if we should bind "Foo" to FooAsync/FooCompleted pattern. 
+            </summary>
+            <param name="controllerType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Web.Mvc.IActionInvokerFactory">
+            <summary>
+            Used to create an <see cref="T:System.Web.Mvc.IActionInvoker"/> instance for the current request.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.IActionInvokerFactory.CreateInstance">
+            <summary>
+            Creates an instance of action invoker for the current request.
+            </summary>
+            <returns>The created <see cref="T:System.Web.Mvc.IActionInvoker"/>.</returns>
+        </member>
+        <member name="T:System.Web.Mvc.IMethodInfoActionDescriptor">
+            <summary>
+            An optional interface for <see cref="T:System.Web.Mvc.ActionDescriptor" /> types which provide a <see cref="P:System.Web.Mvc.IMethodInfoActionDescriptor.MethodInfo" />.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.IMethodInfoActionDescriptor.MethodInfo">
+            <summary>
+            Gets the MethodInfo
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.ITempDataProviderFactory">
+            <summary>
+            Used to create an <see cref="T:System.Web.Mvc.ITempDataProvider"/> instance for the controller.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.ITempDataProviderFactory.CreateInstance">
+            <summary>
+            Creates an instance of <see cref="T:System.Web.Mvc.ITempDataProvider"/> for the controller.
+            </summary>
+            <returns>The created <see cref="T:System.Web.Mvc.ITempDataProvider"/>.</returns>
+        </member>
+        <member name="T:System.Web.Mvc.JQueryFormValueProvider">
+            <summary>
+            The JQuery Form Value provider is used to handle JQuery formatted data in
+            request Forms.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.JQueryFormValueProvider.#ctor(System.Web.Mvc.ControllerContext)">
+            <summary>
+            Constructs a new instance of the JQuery form ValueProvider
+            </summary>
+            <param name="controllerContext">The context on which the ValueProvider operates.</param>
+        </member>
+        <member name="T:System.Web.Mvc.JQueryFormValueProviderFactory">
+            <summary>
+            Provides the necessary ValueProvider to handle JQuery Form data.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.JQueryFormValueProviderFactory.#ctor">
+            <summary>
+            Constructs a new instance of the factory which provides JQuery form ValueProviders.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.JQueryFormValueProviderFactory.GetValueProvider(System.Web.Mvc.ControllerContext)">
+            <summary>
+            Returns the suitable ValueProvider.
+            </summary>
+            <param name="controllerContext">The context on which the ValueProvider should operate.</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Web.Mvc.SelectListGroup">
+            <summary>
+            Represents the optgroup HTML element and its attributes.
+            In a select list, multiple groups with the same name are supported.
+            They are compared with reference equality.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.SelectListGroup.Disabled">
+            <summary>
+            Gets or sets a value that indicates whether this <see cref="T:System.Web.Mvc.SelectListGroup"/> is disabled. 
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.SelectListGroup.Name">
+            <summary>
+            Represents the value of the optgroup's label.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Html.EnumHelper.IsValidForEnumHelper(System.Type)">
+            <summary>
+            Gets a value indicating whether the given <paramref name="type"/> or an expression of this
+            <see cref="T:System.Type"/> is suitable for use in <see cref="M:System.Web.Mvc.Html.EnumHelper.GetSelectList(System.Type)"/> and <see
+            cref="M:System.Web.Mvc.Html.SelectExtensions.EnumDropDownListFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})"/>
+            calls.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/> to check.</param>
+            <returns>
+            <see langword="true"/> if <see cref="M:System.Web.Mvc.Html.EnumHelper.GetSelectList(System.Type)"/> will not throw when passed given
+            <see cref="T:System.Type"/> and <see
+            cref="M:System.Web.Mvc.Html.SelectExtensions.EnumDropDownListFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})"/>
+            will not throw when passed an expression of this <see cref="T:System.Type"/>; <see langword="false"/> otherwise.
+            </returns>
+            <remarks>
+            Currently returns <see langref="true"/> if the <paramref name="type"/> parameter is
+            non-<see langref="null"/>, is an <see langref="enum"/> type, and does not have a
+            <see cref="T:System.FlagsAttribute"/> attribute.
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Html.EnumHelper.IsValidForEnumHelper(System.Web.Mvc.ModelMetadata)">
+            <summary>
+            Gets a value indicating whether the given <paramref name="metadata"/> or associated expression is suitable
+            for use in <see cref="M:System.Web.Mvc.Html.EnumHelper.GetSelectList(System.Web.Mvc.ModelMetadata)"/> and <see
+            cref="M:System.Web.Mvc.Html.SelectExtensions.EnumDropDownListFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})"/>
+            calls.
+            </summary>
+            <param name="metadata">The <see cref="T:System.Web.Mvc.ModelMetadata"/> to check.</param>
+            <returns>
+            <see langword="true"/> if <see cref="M:System.Web.Mvc.Html.EnumHelper.GetSelectList(System.Web.Mvc.ModelMetadata)"/> will return not throw when passed
+            given <see cref="T:System.Web.Mvc.ModelMetadata"/> and <see
+            cref="M:System.Web.Mvc.Html.SelectExtensions.EnumDropDownListFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})"/>
+            will not throw when passed associated expression; <see langword="false"/> otherwise.
+            </returns>
+            <remarks>
+            Currently returns <see langref="true"/> if the <paramref name="metadata"/> parameter is
+            non-<see langref="null"/> and <see cref="M:System.Web.Mvc.Html.EnumHelper.IsValidForEnumHelper(System.Type)"/> returns <see langref="true"/> for
+            <c>metadata.ModelType</c>.
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Html.EnumHelper.GetSelectList(System.Type)">
+            <summary>
+            Gets a list of <see cref="T:System.Web.Mvc.SelectListItem"/> objects corresponding to enum constants defined in the given
+            <paramref name="type"/>.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/> to evaluate.</param>
+            <returns> An <see cref="T:System.Collections.Generic.IList`1"/> for the given <paramref name="type"/>.</returns>
+            <remarks>
+            Throws if <see cref="M:System.Web.Mvc.Html.EnumHelper.IsValidForEnumHelper(System.Type)"/> returns <see langref="false"/> for the given
+            <paramref name="type"/>.
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Html.EnumHelper.GetSelectList(System.Web.Mvc.ModelMetadata)">
+            <summary>
+            Gets a list of <see cref="T:System.Web.Mvc.SelectListItem"/> objects corresponding to enum constants defined in the given
+            <paramref name="metadata"/>.
+            </summary>
+            <param name="metadata">The <see cref="T:System.Web.Mvc.ModelMetadata"/> to evaluate.</param>
+            <returns> An <see cref="T:System.Collections.Generic.IList`1"/> for the given <paramref name="metadata"/>.</returns>
+            <remarks>
+            Throws if <see cref="M:System.Web.Mvc.Html.EnumHelper.IsValidForEnumHelper(System.Web.Mvc.ModelMetadata)"/> returns <see langref="false"/> for the given
+            <paramref name="metadata"/>.
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Html.EnumHelper.GetSelectList(System.Type,System.Enum)">
+            <summary>
+            Gets a list of <see cref="T:System.Web.Mvc.SelectListItem"/> objects corresponding to enum constants defined in the given
+            <paramref name="type"/>.  Also ensures the <paramref name="value"/> will round-trip even if it does not
+            match a defined constant and sets the <c>Selected</c> property to <see langref="true"/> for one element in
+            the returned list -- matching the <paramref name="value"/>.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/> to evaluate.</param>
+            <param name="value">Value from <see cref="T:System.Type"/> <paramref name="type"/> to select.</param>
+            <returns>
+            An <see cref="T:System.Collections.Generic.IList`1"/> for the given <paramref name="type"/>, possibly extended to
+            include an unrecognized <paramref name="value"/>.
+            </returns>
+            <remarks>
+            Throws if <see cref="M:System.Web.Mvc.Html.EnumHelper.IsValidForEnumHelper(System.Type)"/> returns <see langref="false"/> for the given
+            <paramref name="type"/> or if a non-null <paramref name="value"/> has a different <see cref="T:System.Type"/> than
+            <paramref name="type"/>.
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Html.EnumHelper.GetSelectList(System.Web.Mvc.ModelMetadata,System.Enum)">
+            <summary>
+            Gets a list of <see cref="T:System.Web.Mvc.SelectListItem"/> objects corresponding to enum constants defined in the given
+            <paramref name="metadata"/>.  Also ensures the <paramref name="value"/> will round-trip even if it does not
+            match a defined constant and sets the <c>Selected</c> property to <see langref="true"/> for one element in
+            the returned list -- matching the <paramref name="value"/>.
+            </summary>
+            <param name="metadata">The <see cref="T:System.Web.Mvc.ModelMetadata"/> to evaluate.</param>
+            <param name="value">Value from <see cref="T:System.Type"/> of <paramref name="metadata"/> to select.</param>
+            <returns>
+            An <see cref="T:System.Collections.Generic.IList`1"/> for the given <paramref name="metadata"/>, possibly extended to
+            include an unrecognized <paramref name="value"/>.
+            </returns>
+            <remarks>
+            Throws if <see cref="M:System.Web.Mvc.Html.EnumHelper.IsValidForEnumHelper(System.Web.Mvc.ModelMetadata)"/> returns <see langref="false"/> for the given
+            <paramref name="metadata"/> or if a non-null <paramref name="value"/> has a different <see cref="T:System.Type"/>
+            than <c>metadata.ModelType</c>.
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidationExtensions.ValidationMessage(System.Web.Mvc.HtmlHelper,System.String,System.Object,System.String)">
+            <summary>
+            Displays a validation message if an error exists for the specified entry in the
+            <see cref="T:System.Web.Mvc.ModelStateDictionary"/> object.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method operates on.</param>
+            <param name="modelName">The name of the entry being validated.</param>
+            <param name="htmlAttributes">An object that contains the HTML attributes for the element.</param>
+            <param name="tag">The tag to be set for the wrapping HTML element of the validation message.</param>
+            <returns>null if the entry is valid and client-side validation is disabled.
+            Otherwise, a <paramref name="tag"/> element that contains an error message.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidationExtensions.ValidationMessage(System.Web.Mvc.HtmlHelper,System.String,System.String,System.Object,System.String)">
+            <summary>
+            Displays a validation message if an error exists for the specified entry in the
+            <see cref="T:System.Web.Mvc.ModelStateDictionary"/> object.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method operates on.</param>
+            <param name="modelName">The name of the entry being validated.</param>
+            <param name="validationMessage">The message to display if the specified entry contains an error.</param>
+            <param name="htmlAttributes">An object that contains the HTML attributes for the element.</param>
+            <param name="tag">The tag to be set for the wrapping HTML element of the validation message.</param>
+            <returns>null if the entry is valid and client-side validation is disabled.
+            Otherwise, a <paramref name="tag"/> element that contains an error message.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidationExtensions.ValidationMessage(System.Web.Mvc.HtmlHelper,System.String,System.String,System.String)">
+            <summary>
+            Displays a validation message if an error exists for the specified entry in the
+            <see cref="T:System.Web.Mvc.ModelStateDictionary"/> object.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method operates on.</param>
+            <param name="modelName">The name of the entry being validated.</param>
+            <param name="validationMessage">The message to display if the specified entry contains an error.</param>
+            <param name="tag">The tag to be set for the wrapping HTML element of the validation message.</param>
+            <returns>null if the entry is valid and client-side validation is disabled.
+            Otherwise, a <paramref name="tag"/> element that contains an error message.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidationExtensions.ValidationMessage(System.Web.Mvc.HtmlHelper,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">
+            <summary>
+            Displays a validation message if an error exists for the specified entry in the
+            <see cref="T:System.Web.Mvc.ModelStateDictionary"/> object.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method operates on.</param>
+            <param name="modelName">The name of the entry being validated.</param>
+            <param name="htmlAttributes">An <see cref="T:System.Collections.Generic.IDictionary`2"/> that contains the HTML attributes
+            for the element.</param>
+            <param name="tag">The tag to be set for the wrapping HTML element of the validation message.</param>
+            <returns>null if the entry is valid and client-side validation is disabled.
+            Otherwise, a <paramref name="tag"/> element that contains an error message.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidationExtensions.ValidationMessage(System.Web.Mvc.HtmlHelper,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">
+            <summary>
+            Displays a validation message if an error exists for the specified entry in the
+            <see cref="T:System.Web.Mvc.ModelStateDictionary"/> object.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method operates on.</param>
+            <param name="modelName">The name of the model object being validated.</param>
+            <param name="validationMessage">The message to display if the specified entry contains an error.</param>
+            <param name="htmlAttributes">An <see cref="T:System.Collections.Generic.IDictionary`2"/> that contains the HTML attributes
+            for the element.</param>
+            <param name="tag">The tag to be set for the wrapping HTML element of the validation message.</param>
+            <returns>null if the model object is valid and client-side validation is disabled.
+            Otherwise, a <paramref name="tag"/> element that contains an error message.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidationExtensions.ValidationMessageFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String,System.String)">
+            <summary>
+            Returns the HTML markup for a validation-error message for the specified expression.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method operates on.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to render.
+            </param>
+            <param name="validationMessage">The message to display if a validation error occurs.</param>
+            <param name="tag">The tag to be set for the wrapping HTML element of the validation message.</param>
+            <returns>null if the model object is valid and client-side validation is disabled.
+            Otherwise, a <paramref name="tag"/> element that contains an error message.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidationExtensions.ValidationMessageFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String,System.Object,System.String)">
+            <summary>
+            Returns the HTML markup for a validation-error message for the specified expression.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method operates on.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to render.
+            </param>
+            <param name="validationMessage">The message to display if a validation error occurs.</param>
+            <param name="htmlAttributes">An object that contains the HTML attributes for the element.</param>
+            <param name="tag">The tag to be set for the wrapping HTML element of the validation message.</param>
+            <returns>null if the model object is valid and client-side validation is disabled.
+            Otherwise, a <paramref name="tag"/> element that contains an error message.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidationExtensions.ValidationMessageFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">
+            <summary>
+            Returns the HTML markup for a validation-error message for the specified expression.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method operates on.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to render.
+            </param>
+            <param name="validationMessage">The message to display if a validation error occurs.</param>
+            <param name="htmlAttributes">An <see cref="T:System.Collections.Generic.IDictionary`2"/> that contains the HTML attributes
+            for the element.</param>
+            <param name="tag">The tag to be set for the wrapping HTML element of the validation message.</param>
+            <returns>null if the model object is valid and client-side validation is disabled.
+            Otherwise, a <paramref name="tag"/> element that contains an error message.</returns>
+        </member>
+        <member name="T:System.Web.Mvc.Properties.MvcResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ActionMethodSelector_AmbiguousMatch">
+            <summary>
+              Looks up a localized string similar to The current request for action &apos;{0}&apos; on controller type &apos;{1}&apos; is ambiguous between the following action methods:{2}.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ActionMethodSelector_AmbiguousMatchType">
+            <summary>
+              Looks up a localized string similar to {0} on type {1}.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ArgumentMustBeGreaterThanOrEqualTo">
+            <summary>
+              Looks up a localized string similar to Value must be greater than or equal to {0}..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.AsyncActionDescriptor_CannotExecuteSynchronously">
+            <summary>
+              Looks up a localized string similar to The asynchronous action method &apos;{0}&apos; cannot be executed synchronously..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.AsyncActionMethodSelector_AmbiguousMethodMatch">
+            <summary>
+              Looks up a localized string similar to Lookup for method &apos;{0}&apos; on controller type &apos;{1}&apos; failed because of an ambiguity between the following methods:{2}.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.AsyncActionMethodSelector_CouldNotFindMethod">
+            <summary>
+              Looks up a localized string similar to Could not locate a method named &apos;{0}&apos; on controller type {1}..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.AsyncCommon_AsyncResultAlreadyConsumed">
+            <summary>
+              Looks up a localized string similar to The provided IAsyncResult has already been consumed..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.AsyncCommon_ControllerMustImplementIAsyncManagerContainer">
+            <summary>
+              Looks up a localized string similar to The controller of type &apos;{0}&apos; must subclass AsyncController or implement the IAsyncManagerContainer interface..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.AsyncCommon_InvalidAsyncResult">
+            <summary>
+              Looks up a localized string similar to The provided IAsyncResult is not valid for this method..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.AsyncCommon_InvalidTimeout">
+            <summary>
+              Looks up a localized string similar to The timeout value must be non-negative or Timeout.Infinite..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.AttributeRouting_CouldNotInferAreaNameFromMissingNamespace">
+            <summary>
+              Looks up a localized string similar to Could not infer area name for the controller &apos;{0}&apos; because it does not have a namespace..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.AuthorizeAttribute_CannotUseWithinChildActionCache">
+            <summary>
+              Looks up a localized string similar to AuthorizeAttribute cannot be used within a child action caching block..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ChildActionOnlyAttribute_MustBeInChildRequest">
+            <summary>
+              Looks up a localized string similar to The action &apos;{0}&apos; is accessible only by a child request..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ClientDataTypeModelValidatorProvider_FieldMustBeDate">
+            <summary>
+              Looks up a localized string similar to The field {0} must be a date..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ClientDataTypeModelValidatorProvider_FieldMustBeNumeric">
+            <summary>
+              Looks up a localized string similar to The field {0} must be a number..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Common_NoRouteMatched">
+            <summary>
+              Looks up a localized string similar to No route in the route table matches the supplied values..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Common_NullOrEmpty">
+            <summary>
+              Looks up a localized string similar to Value cannot be null or empty..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Common_PartialViewNotFound">
+            <summary>
+              Looks up a localized string similar to The partial view &apos;{0}&apos; was not found or no view engine supports the searched locations. The following locations were searched:{1}.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Common_PropertyCannotBeNullOrEmpty">
+            <summary>
+              Looks up a localized string similar to The property &apos;{0}&apos; cannot be null or empty..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Common_PropertyNotFound">
+            <summary>
+              Looks up a localized string similar to The property {0}.{1} could not be found..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Common_TriState_False">
+            <summary>
+              Looks up a localized string similar to False.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Common_TriState_NotSet">
+            <summary>
+              Looks up a localized string similar to Not Set.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Common_TriState_True">
+            <summary>
+              Looks up a localized string similar to True.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Common_TypeMustDriveFromType">
+            <summary>
+              Looks up a localized string similar to The type {0} must derive from {1}.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Common_ValueNotValidForProperty">
+            <summary>
+              Looks up a localized string similar to The value &apos;{0}&apos; is invalid..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Common_ViewNotFound">
+            <summary>
+              Looks up a localized string similar to The view &apos;{0}&apos; or its master was not found or no view engine supports the searched locations. The following locations were searched:{1}.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.CompareAttribute_MustMatch">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; and &apos;{1}&apos; do not match..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.CompareAttribute_UnknownProperty">
+            <summary>
+              Looks up a localized string similar to Could not find a property named {0}..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Controller_UnknownAction">
+            <summary>
+              Looks up a localized string similar to A public action method &apos;{0}&apos; was not found on controller &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Controller_UnknownAction_NoActionName">
+            <summary>
+              Looks up a localized string similar to No matching action was found on controller &apos;{0}&apos;. This can happen when a controller uses RouteAttribute for routing, but no action on that controller matches the request..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Controller_UpdateModel_UpdateUnsuccessful">
+            <summary>
+              Looks up a localized string similar to The model of type &apos;{0}&apos; could not be updated..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Controller_Validate_ValidationFailed">
+            <summary>
+              Looks up a localized string similar to The model of type &apos;{0}&apos; is not valid..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ControllerBase_CannotExecuteWithNullHttpContext">
+            <summary>
+              Looks up a localized string similar to Cannot execute Controller with a null HttpContext..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ControllerBase_CannotHandleMultipleRequests">
+            <summary>
+              Looks up a localized string similar to A single instance of controller &apos;{0}&apos; cannot be used to handle multiple requests. If a custom controller factory is in use, make sure that it creates a new instance of the controller for each request..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ControllerBuilder_ErrorCreatingControllerFactory">
+            <summary>
+              Looks up a localized string similar to An error occurred when trying to create the IControllerFactory &apos;{0}&apos;. Make sure that the controller factory has a public parameterless constructor..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ControllerBuilder_FactoryReturnedNull">
+            <summary>
+              Looks up a localized string similar to The IControllerFactory &apos;{0}&apos; did not return a controller for the name &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ControllerBuilder_MissingIControllerFactory">
+            <summary>
+              Looks up a localized string similar to The controller factory type &apos;{0}&apos; must implement the IControllerFactory interface..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.CshtmlView_ViewCouldNotBeCreated">
+            <summary>
+              Looks up a localized string similar to The view found at &apos;{0}&apos; was not created..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.CshtmlView_WrongViewBase">
+            <summary>
+              Looks up a localized string similar to The view at &apos;{0}&apos; must derive from WebViewPage, or WebViewPage&lt;TModel&gt;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DataAnnotationsModelMetadataProvider_UnknownProperty">
+            <summary>
+              Looks up a localized string similar to {0} has a DisplayColumn attribute for {1}, but property {1} does not exist..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DataAnnotationsModelMetadataProvider_UnreadableProperty">
+            <summary>
+              Looks up a localized string similar to {0} has a DisplayColumn attribute for {1}, but property {1} does not have a public getter..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DataAnnotationsModelValidatorProvider_ConstructorRequirements">
+            <summary>
+              Looks up a localized string similar to The type {0} must have a public constructor which accepts three parameters of types {1}, {2}, and {3}.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DataAnnotationsModelValidatorProvider_ValidatableConstructorRequirements">
+            <summary>
+              Looks up a localized string similar to The type {0} must have a public constructor which accepts two parameters of types {1} and {2}..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DefaultControllerFactory_ControllerNameAmbiguous_WithoutRouteUrl">
+            <summary>
+              Looks up a localized string similar to Multiple types were found that match the controller named &apos;{0}&apos;. This can happen if the route that services this request does not specify namespaces to search for a controller that matches the request. If this is the case, register this route by calling an overload of the &apos;MapRoute&apos; method that takes a &apos;namespaces&apos; parameter.{2}{2}The request for &apos;{0}&apos; has found the following matching controllers:{1}.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DefaultControllerFactory_ControllerNameAmbiguous_WithRouteUrl">
+            <summary>
+              Looks up a localized string similar to Multiple types were found that match the controller named &apos;{0}&apos;. This can happen if the route that services this request (&apos;{1}&apos;) does not specify namespaces to search for a controller that matches the request. If this is the case, register this route by calling an overload of the &apos;MapRoute&apos; method that takes a &apos;namespaces&apos; parameter.{3}{3}The request for &apos;{0}&apos; has found the following matching controllers:{2}.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DefaultControllerFactory_DirectRouteAmbiguous">
+            <summary>
+              Looks up a localized string similar to Multiple controller types were found that match the URL. This can happen if attribute routes on multiple controllers match the requested URL.{1}{1}The request has found the following matching controller types: {0}.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DefaultControllerFactory_ErrorCreatingController">
+            <summary>
+              Looks up a localized string similar to An error occurred when trying to create a controller of type &apos;{0}&apos;. Make sure that the controller has a parameterless public constructor..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DefaultControllerFactory_NoControllerFound">
+            <summary>
+              Looks up a localized string similar to The controller for path &apos;{0}&apos; was not found or does not implement IController..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DefaultControllerFactory_TypeDoesNotSubclassControllerBase">
+            <summary>
+              Looks up a localized string similar to The controller type &apos;{0}&apos; must implement IController..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DefaultInlineConstraintResolver_AmbiguousCtors">
+            <summary>
+              Looks up a localized string similar to The constructor to use for activating the constraint type &apos;{0}&apos; is ambiguous. Multiple constructors were found with the following number of parameters: {1}..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DefaultInlineConstraintResolver_CouldNotFindCtor">
+            <summary>
+              Looks up a localized string similar to Could not find a constructor for constraint type &apos;{0}&apos; with the following number of parameters: {1}..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DefaultInlineConstraintResolver_TypeNotConstraint">
+            <summary>
+              Looks up a localized string similar to The constraint type &apos;{0}&apos; which is mapped to constraint key &apos;{1}&apos; must implement the IRouteConstraint interface..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DefaultModelBinder_ValueInvalid">
+            <summary>
+              Looks up a localized string similar to The value &apos;{0}&apos; is not valid for {1}..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DefaultModelBinder_ValueRequired">
+            <summary>
+              Looks up a localized string similar to A value is required..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DefaultViewLocationCache_NegativeTimeSpan">
+            <summary>
+              Looks up a localized string similar to The number of ticks for the TimeSpan value must be greater than or equal to 0..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DependencyResolver_DoesNotImplementICommonServiceLocator">
+            <summary>
+              Looks up a localized string similar to The type {0} does not appear to implement Microsoft.Practices.ServiceLocation.IServiceLocator..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DirectRoute_AmbiguousMatch">
+            <summary>
+              Looks up a localized string similar to The current request is ambiguous between the following action methods:{0}.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DirectRoute_InvalidParameter_Action">
+            <summary>
+              Looks up a localized string similar to A direct route for an action method cannot use the parameter &apos;action&apos;. Specify a literal path in place of this parameter to create a route to the action..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DirectRoute_InvalidParameter_Controller">
+            <summary>
+              Looks up a localized string similar to A direct route cannot use the parameter &apos;controller&apos;. Specify a literal path in place of this parameter to create a route to a controller..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DirectRoute_MissingActionDescriptors">
+            <summary>
+              Looks up a localized string similar to The route does not have any associated action descriptors. Routing requires that each direct route map to a non-empty set of actions..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DirectRoute_MissingControllerDescriptor">
+            <summary>
+              Looks up a localized string similar to The route does not have an associated controller descriptor. Routing requires that each direct route map to a single controller..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DirectRoute_MissingControllerType">
+            <summary>
+              Looks up a localized string similar to The route does not have an associated controller type. Routing requires that each direct route map to a single controller type..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.DirectRoute_RouteHandlerNotSupported">
+            <summary>
+              Looks up a localized string similar to Direct routing does not support per-route route handlers..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.EnumHelper_InvalidMetadataParameter">
+            <summary>
+              Looks up a localized string similar to ModelType property must not be null..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.EnumHelper_InvalidParameterType">
+            <summary>
+              Looks up a localized string similar to Type &apos;{0}&apos; is not supported..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.EnumHelper_InvalidValueParameter">
+            <summary>
+              Looks up a localized string similar to Invalid value parameter type &apos;{0}&apos;. Must match type parameter &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ExceptionViewAttribute_NonExceptionType">
+            <summary>
+              Looks up a localized string similar to The type &apos;{0}&apos; does not inherit from Exception..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ExpressionHelper_InvalidIndexerExpression">
+            <summary>
+              Looks up a localized string similar to The expression compiler was unable to evaluate the indexer expression &apos;{0}&apos; because it references the model parameter &apos;{1}&apos; which is unavailable..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.FilterAttribute_OrderOutOfRange">
+            <summary>
+              Looks up a localized string similar to Order must be greater than or equal to -1..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.GlobalFilterCollection_UnsupportedFilterInstance">
+            <summary>
+              Looks up a localized string similar to The given filter instance must implement one or more of the following filter interfaces: {0}, {1}, {2}, {3}, {4}..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.HtmlHelper_InvalidHttpMethod">
+            <summary>
+              Looks up a localized string similar to The GET and POST HTTP methods are not supported..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.HtmlHelper_InvalidHttpVerb">
+            <summary>
+              Looks up a localized string similar to The specified HttpVerbs value is not supported. The supported values are Delete, Head, Put, Options, and Patch..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.HtmlHelper_MissingSelectData">
+            <summary>
+              Looks up a localized string similar to There is no ViewData item of type &apos;{1}&apos; that has the key &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.HtmlHelper_SelectExpressionNotEnumerable">
+            <summary>
+              Looks up a localized string similar to The parameter &apos;{0}&apos; must evaluate to an IEnumerable when multiple selection is allowed..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.HtmlHelper_TextAreaParameterOutOfRange">
+            <summary>
+              Looks up a localized string similar to The value must be greater than or equal to zero..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.HtmlHelper_WrongSelectDataType">
+            <summary>
+              Looks up a localized string similar to The ViewData item that has the key &apos;{0}&apos; is of type &apos;{1}&apos; but must be of type &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.HttpRouteBuilder_CouldNotResolveConstraint">
+            <summary>
+              Looks up a localized string similar to The inline constraint resolver of type &apos;{0}&apos; was unable to resolve the following inline constraint: &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.JQuerySyntaxMissingClosingBracket">
+            <summary>
+              Looks up a localized string similar to The key is invalid JQuery syntax because it is missing a closing bracket..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.JsonRequest_GetNotAllowed">
+            <summary>
+              Looks up a localized string similar to This request has been blocked because sensitive information could be disclosed to third party web sites when this is used in a GET request. To allow GET requests, set JsonRequestBehavior to AllowGet..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.JsonValueProviderFactory_RequestTooLarge">
+            <summary>
+              Looks up a localized string similar to The JSON request was too large to be deserialized..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ModelBinderAttribute_ErrorCreatingModelBinder">
+            <summary>
+              Looks up a localized string similar to An error occurred when trying to create the IModelBinder &apos;{0}&apos;. Make sure that the binder has a public parameterless constructor..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ModelBinderAttribute_TypeNotIModelBinder">
+            <summary>
+              Looks up a localized string similar to The type &apos;{0}&apos; does not implement the IModelBinder interface..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ModelBinderDictionary_MultipleAttributes">
+            <summary>
+              Looks up a localized string similar to The type &apos;{0}&apos; contains multiple attributes that inherit from CustomModelBinderAttribute..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ModelMetadata_PropertyNotSettable">
+            <summary>
+              Looks up a localized string similar to This property setter is obsolete, because its value is derived from ModelMetadata.Model now..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.MvcForm_ConstructorObsolete">
+            <summary>
+              Looks up a localized string similar to This constructor is obsolete, because its functionality has been moved to MvcForm(ViewContext) now..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.MvcRazorCodeParser_CannotHaveModelAndInheritsKeyword">
+            <summary>
+              Looks up a localized string similar to The &apos;inherits&apos; keyword is not allowed when a &apos;{0}&apos; keyword is used..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.MvcRazorCodeParser_ModelKeywordMustBeFollowedByTypeName">
+            <summary>
+              Looks up a localized string similar to The &apos;{0}&apos; keyword must be followed by a type name on the same line..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.MvcRazorCodeParser_OnlyOneModelStatementIsAllowed">
+            <summary>
+              Looks up a localized string similar to Only one &apos;{0}&apos; statement is allowed in a file..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.MvcRouteHandler_RouteValuesHasNoController">
+            <summary>
+              Looks up a localized string similar to The matched route does not include a &apos;controller&apos; route value, which is required..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.OutputCacheAttribute_CannotNestChildCache">
+            <summary>
+              Looks up a localized string similar to OutputCacheAttribute is not allowed on child actions which are children of an already cached child action..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.OutputCacheAttribute_ChildAction_UnsupportedSetting">
+            <summary>
+              Looks up a localized string similar to OutputCacheAttribute for child actions only supports Duration, VaryByCustom, and VaryByParam values. Please do not set CacheProfile, Location, NoStore, SqlDependency, VaryByContentEncoding, or VaryByHeader values for child actions..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.OutputCacheAttribute_InvalidDuration">
+            <summary>
+              Looks up a localized string similar to Duration must be a positive number..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.OutputCacheAttribute_InvalidVaryByParam">
+            <summary>
+              Looks up a localized string similar to VaryByParam must be &apos;*&apos;, &apos;none&apos;, or a semicolon-delimited list of keys..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.RedirectAction_CannotRedirectInChildAction">
+            <summary>
+              Looks up a localized string similar to Child actions are not allowed to perform redirect actions..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ReflectedActionDescriptor_CannotCallInstanceMethodOnNonControllerType">
+            <summary>
+              Looks up a localized string similar to Cannot create a descriptor for instance method &apos;{0}&apos; on type &apos;{1}&apos; because the type does not derive from ControllerBase..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ReflectedActionDescriptor_CannotCallMethodsWithOutOrRefParameters">
+            <summary>
+              Looks up a localized string similar to Cannot call action method &apos;{0}&apos; on controller &apos;{1}&apos; because the parameter &apos;{2}&apos; is passed by reference..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ReflectedActionDescriptor_CannotCallOpenGenericMethods">
+            <summary>
+              Looks up a localized string similar to Cannot call action method &apos;{0}&apos; on controller &apos;{1}&apos; because the action method is a generic method..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ReflectedActionDescriptor_CannotCallStaticMethod">
+            <summary>
+              Looks up a localized string similar to Cannot call action method &apos;{0}&apos; on controller &apos;{1}&apos; because the action method is a static method..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ReflectedActionDescriptor_ParameterCannotBeNull">
+            <summary>
+              Looks up a localized string similar to The parameters dictionary contains a null entry for parameter &apos;{0}&apos; of non-nullable type &apos;{1}&apos; for method &apos;{2}&apos; in &apos;{3}&apos;. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ReflectedActionDescriptor_ParameterNotInDictionary">
+            <summary>
+              Looks up a localized string similar to The parameters dictionary does not contain an entry for parameter &apos;{0}&apos; of type &apos;{1}&apos; for method &apos;{2}&apos; in &apos;{3}&apos;. The dictionary must contain an entry for each parameter, including parameters that have null values..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ReflectedActionDescriptor_ParameterValueHasWrongType">
+            <summary>
+              Looks up a localized string similar to The parameters dictionary contains an invalid entry for parameter &apos;{0}&apos; for method &apos;{1}&apos; in &apos;{2}&apos;. The dictionary contains a value of type &apos;{3}&apos;, but the parameter requires a value of type &apos;{4}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ReflectedParameterBindingInfo_MultipleConverterAttributes">
+            <summary>
+              Looks up a localized string similar to The parameter &apos;{0}&apos; on method &apos;{1}&apos; contains multiple attributes that inherit from CustomModelBinderAttribute..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.RemoteAttribute_NoUrlFound">
+            <summary>
+              Looks up a localized string similar to No url for remote validation could be found..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.RemoteAttribute_RemoteValidationFailed">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; is invalid..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.RequireHttpsAttribute_MustUseSsl">
+            <summary>
+              Looks up a localized string similar to The requested resource can only be accessed via SSL..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Route_CannotHaveCatchAllInMultiSegment">
+            <summary>
+              Looks up a localized string similar to A path segment that contains more than one section, such as a literal section or a parameter, cannot contain a catch-all parameter..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Route_CannotHaveConsecutiveParameters">
+            <summary>
+              Looks up a localized string similar to A path segment cannot contain two consecutive parameters. They must be separated by a &apos;/&apos; or by a literal string..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Route_CannotHaveConsecutiveSeparators">
+            <summary>
+              Looks up a localized string similar to The route template separator character &apos;/&apos; cannot appear consecutively. It must be separated by either a parameter or a literal value..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Route_CatchAllMustBeLast">
+            <summary>
+              Looks up a localized string similar to A catch-all parameter can only appear as the last segment of the route template..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Route_InvalidConstraint">
+            <summary>
+              Looks up a localized string similar to The constraint entry &apos;{0}&apos; on the route with route template &apos;{1}&apos; must have a string value or be of a type which implements &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Route_InvalidParameterName">
+            <summary>
+              Looks up a localized string similar to The route parameter name &apos;{0}&apos; is invalid. Route parameter names must be non-empty and cannot contain these characters: &quot;{{&quot;, &quot;}}&quot;, &quot;/&quot;, &quot;?&quot;.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Route_InvalidRouteTemplate">
+            <summary>
+              Looks up a localized string similar to The route template cannot start with a &apos;/&apos; or &apos;~&apos; character and it cannot contain a &apos;?&apos; character..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Route_MismatchedParameter">
+            <summary>
+              Looks up a localized string similar to There is an incomplete parameter in this path segment: &apos;{0}&apos;. Check that each &apos;{{&apos; character has a matching &apos;}}&apos; character..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Route_RepeatedParameter">
+            <summary>
+              Looks up a localized string similar to The route parameter name &apos;{0}&apos; appears more than one time in the route template..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.RouteAreaPrefix_CannotEnd_WithForwardSlash">
+            <summary>
+              Looks up a localized string similar to The prefix &apos;{0}&apos; of the route area named &apos;{1}&apos; on the controller named &apos;{2}&apos; cannot end with a forward slash..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.RoutePrefix_CannotStartOrEnd_WithForwardSlash">
+            <summary>
+              Looks up a localized string similar to The route prefix &apos;{0}&apos; on the controller named &apos;{1}&apos; cannot begin or end with a forward slash..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.RoutePrefix_CannotSupportMultiRoutePrefix">
+            <summary>
+              Looks up a localized string similar to Only one route prefix attribute is supported. Remove extra attributes from the controller of type &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.RoutePrefix_PrefixCannotBeNull">
+            <summary>
+              Looks up a localized string similar to The property &apos;prefix&apos; from route prefix attribute on controller of type &apos;{0}&apos; cannot be null..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.RouteTemplate_CannotStart_WithForwardSlash">
+            <summary>
+              Looks up a localized string similar to The route template &apos;{0}&apos; on the action named &apos;{1}&apos; on the controller named &apos;{2}&apos; cannot begin with a forward slash..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.SelectExtensions_InvalidExpressionParameterNoMetadata">
+            <summary>
+              Looks up a localized string similar to Unable to determine ModelMetadata for expression &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.SelectExtensions_InvalidExpressionParameterNoModelType">
+            <summary>
+              Looks up a localized string similar to Unable to determine type of expression &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.SelectExtensions_InvalidExpressionParameterType">
+            <summary>
+              Looks up a localized string similar to Return type &apos;{0}&apos; is not supported..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.SelectExtensions_InvalidExpressionParameterTypeHasFlags">
+            <summary>
+              Looks up a localized string similar to Return type &apos;{0}&apos; is not supported. Type must not have a &apos;{1}&apos; attribute..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.SessionStateTempDataProvider_SessionStateDisabled">
+            <summary>
+              Looks up a localized string similar to The SessionStateTempDataProvider class requires session state to be enabled..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.SingleServiceResolver_CannotRegisterTwoInstances">
+            <summary>
+              Looks up a localized string similar to An instance of {0} was found in the resolver as well as a custom registered provider in {1}. Please set only one or the other..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.SubRouteCollection_DuplicateRouteName">
+             <summary>
+               Looks up a localized string similar to A route named &apos;{0}&apos; is already in the route collection. Route names must be unique.
+            
+            Duplicates:
+            {1}
+            {2}.
+             </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.SynchronizationContextUtil_ExceptionThrown">
+            <summary>
+              Looks up a localized string similar to An operation that crossed a synchronization context failed. See the inner exception for more information..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.TaskAsyncActionDescriptor_CannotExecuteSynchronously">
+            <summary>
+              Looks up a localized string similar to The asynchronous action method &apos;{0}&apos; returns a Task, which cannot be executed synchronously..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.TemplateHelpers_NoTemplate">
+            <summary>
+              Looks up a localized string similar to Unable to locate an appropriate template for type {0}..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.TemplateHelpers_TemplateLimitations">
+            <summary>
+              Looks up a localized string similar to Templates can be used only with field access, property access, single-dimension array index, or single-parameter custom indexer expressions..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.Templates_TypeMustImplementIEnumerable">
+            <summary>
+              Looks up a localized string similar to The Collection template was used with an object of type &apos;{0}&apos;, which does not implement System.IEnumerable..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.TypeCache_DoNotModify">
+            <summary>
+              Looks up a localized string similar to This file is automatically generated. Please do not modify the contents of this file..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.TypeHelpers_CannotCreateInstance">
+            <summary>
+              Looks up a localized string similar to {0} Object type &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.TypeMethodMustNotReturnNull">
+            <summary>
+              Looks up a localized string similar to {0}.{1} must not return null..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ValidatableObjectAdapter_IncompatibleType">
+            <summary>
+              Looks up a localized string similar to The model object inside the metadata claimed to be compatible with {0}, but was actually {1}..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ValueProviderResult_ConversionThrew">
+            <summary>
+              Looks up a localized string similar to The parameter conversion from type &apos;{0}&apos; to type &apos;{1}&apos; failed. See the inner exception for more information..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ValueProviderResult_NoConverterExists">
+            <summary>
+              Looks up a localized string similar to The parameter conversion from type &apos;{0}&apos; to type &apos;{1}&apos; failed because no type converter can convert between these types..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ViewDataDictionary_ModelCannotBeNull">
+            <summary>
+              Looks up a localized string similar to The model item passed into the dictionary is null, but this dictionary requires a non-null model item of type &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ViewDataDictionary_WrongTModelType">
+            <summary>
+              Looks up a localized string similar to The model item passed into the dictionary is of type &apos;{0}&apos;, but this dictionary requires a model item of type &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ViewMasterPage_RequiresViewPage">
+            <summary>
+              Looks up a localized string similar to A ViewMasterPage can be used only with content pages that derive from ViewPage or ViewPage&lt;TModel&gt;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ViewPageHttpHandlerWrapper_ExceptionOccurred">
+            <summary>
+              Looks up a localized string similar to Execution of the child request failed. Please examine the InnerException for more information..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ViewStartPage_RequiresMvcRazorView">
+            <summary>
+              Looks up a localized string similar to A ViewStartPage can be used only with with a page that derives from WebViewPage or another ViewStartPage..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ViewUserControl_RequiresViewDataProvider">
+            <summary>
+              Looks up a localized string similar to The ViewUserControl &apos;{0}&apos; cannot find an IViewDataContainer object. The ViewUserControl must be inside a ViewPage, a ViewMasterPage, or another ViewUserControl..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.ViewUserControl_RequiresViewPage">
+            <summary>
+              Looks up a localized string similar to A ViewUserControl can be used only in pages that derive from ViewPage or ViewPage&lt;TModel&gt;..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.WebFormViewEngine_UserControlCannotHaveMaster">
+            <summary>
+              Looks up a localized string similar to A master name cannot be specified when the view is a ViewUserControl..
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Properties.MvcResources.WebFormViewEngine_WrongViewBase">
+            <summary>
+              Looks up a localized string similar to The view at &apos;{0}&apos; must derive from ViewPage, ViewPage&lt;TModel&gt;, ViewUserControl, or ViewUserControl&lt;TModel&gt;..
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.AllowAnonymousAttribute">
+            <summary>
+            Actions and controllers with the AllowAnonymous attribute are skipped by the Authorize attribute
+            on authorization. See AccountController.cs in the project template for an example.
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.Filters.AuthenticationChallengeContext">
+            <summary>
+            Represents an authentication challenge context containing information for executing an authentication
+            challenge.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Filters.AuthenticationChallengeContext.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Web.Mvc.Filters.AuthenticationChallengeContext"/> class.</summary>
+            <remarks>This constructor should only be used for unit testing purposes.</remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Filters.AuthenticationChallengeContext.#ctor(System.Web.Mvc.ControllerContext,System.Web.Mvc.ActionDescriptor,System.Web.Mvc.ActionResult)">
+            <summary>Initializes a new instance of the <see cref="T:System.Web.Mvc.Filters.AuthenticationChallengeContext"/> class.</summary>
+            <param name="controllerContext">The controller context.</param>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <param name="result">The current action result.</param>
+        </member>
+        <member name="P:System.Web.Mvc.Filters.AuthenticationChallengeContext.ActionDescriptor">
+            <summary>Gets or sets the action descriptor.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Filters.AuthenticationChallengeContext.Result">
+            <summary>Gets or sets the action result to execute.</summary>
+            <remarks>
+            Authentication filters wishing to add an authentication challenge will often chain the result (set the
+            value to an action result that executes the previous value and then does something additional, such as add
+            a WWW-Authenticate header).
+            </remarks>
+        </member>
+        <member name="T:System.Web.Mvc.Filters.AuthenticationContext">
+            <summary>Represents an authentication context containing information for performing authentication.</summary>
+        </member>
+        <member name="M:System.Web.Mvc.Filters.AuthenticationContext.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Web.Mvc.Filters.AuthenticationContext"/> class.</summary>
+            <remarks>This constructor should only be used for unit testing purposes.</remarks>
+        </member>
+        <member name="M:System.Web.Mvc.Filters.AuthenticationContext.#ctor(System.Web.Mvc.ControllerContext,System.Web.Mvc.ActionDescriptor,System.Security.Principal.IPrincipal)">
+            <summary>Initializes a new instance of the <see cref="T:System.Web.Mvc.Filters.AuthenticationContext"/> class.</summary>
+            <param name="controllerContext">The controller context.</param>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <param name="principal">The current principal.</param>
+        </member>
+        <member name="P:System.Web.Mvc.Filters.AuthenticationContext.ActionDescriptor">
+            <summary>Gets or sets the action descriptor.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Filters.AuthenticationContext.Principal">
+            <summary>Gets or sets the currently authenticated principal.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Filters.AuthenticationContext.Result">
+            <summary>
+            Gets or sets the error result, which indicates that authentication was attempted and failed.
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.Filters.IAuthenticationFilter">
+            <summary>Defines a filter that performs authentication.</summary>
+        </member>
+        <member name="M:System.Web.Mvc.Filters.IAuthenticationFilter.OnAuthentication(System.Web.Mvc.Filters.AuthenticationContext)">
+            <summary>Authenticates the request.</summary>
+            <param name="filterContext">The context to use for authentication.</param>
+        </member>
+        <member name="M:System.Web.Mvc.Filters.IAuthenticationFilter.OnAuthenticationChallenge(System.Web.Mvc.Filters.AuthenticationChallengeContext)">
+            <summary>Adds an authentication challenge to the current <see cref="T:System.Web.Mvc.ActionResult"/>.</summary>
+            <param name="filterContext">The context to use for the authentication challenge.</param>
+        </member>
+        <member name="T:System.Web.Mvc.Filters.IOverrideFilter">
+            <summary>Defines a filter that overrides other filters.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.Filters.IOverrideFilter.FiltersToOverride">
+            <summary>Gets the type of filters to override.</summary>
+            <remarks>
+            The following types of filters may be overridden:
+            <list type="bullet">
+            <item><description><see cref="T:System.Web.Mvc.IActionFilter"/></description></item>
+            <item><description><see cref="T:System.Web.Mvc.Filters.IAuthenticationFilter"/></description></item>
+            <item><description><see cref="T:System.Web.Mvc.IAuthorizationFilter"/></description></item>
+            <item><description><see cref="T:System.Web.Mvc.IExceptionFilter"/></description></item>
+            <item><description><see cref="T:System.Web.Mvc.IResultFilter"/></description></item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:System.Web.Mvc.DataTypeAttributeAdapter">
+            <summary>
+            A validation adapter that is used to map <see cref="T:System.ComponentModel.DataAnnotations.DataTypeAttribute"/>'s to a single client side validation rule.
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.Html5DateRenderingMode">
+            <summary>
+            Controls the value-rendering method For HTML5 input elements of types such as date, time, datetime and datetime-local.
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.Html5DateRenderingMode.CurrentCulture">
+            <summary>
+            Render date and time values according to the current culture's ToString behavior.
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.Html5DateRenderingMode.Rfc3339">
+            <summary>
+            Render date and time values as Rfc3339 compliant strings to support HTML5 date and time types of input elements.
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.RouteAttribute">
+            <summary>
+            Place on a controller or action to expose it directly via a route. 
+            When placed on a controller, it applies to actions that do not have any <see cref="T:System.Web.Mvc.RouteAttribute"/>s on them.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.RouteAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.RouteAttribute" /> class.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.RouteAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.RouteAttribute" /> class.
+            </summary>
+            <param name="template">The route template describing the URI pattern to match against.</param>
+        </member>
+        <member name="P:System.Web.Mvc.RouteAttribute.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:System.Web.Mvc.RouteAttribute.Order">
+            <inheritdoc />
+        </member>
+        <member name="P:System.Web.Mvc.RouteAttribute.Template">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.OverrideActionFiltersAttribute">
+            <summary>Represents a filter attribute that overrides action filters defined at a higher level.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.OverrideActionFiltersAttribute.FiltersToOverride">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.OverrideAuthenticationAttribute">
+            <summary>
+            Represents a filter attribute that overrides authentication filters defined at a higher level.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.OverrideAuthenticationAttribute.FiltersToOverride">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.OverrideAuthorizationAttribute">
+            <summary>
+            Represents a filter attribute that overrides authorization filters defined at a higher level.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.OverrideAuthorizationAttribute.FiltersToOverride">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.OverrideExceptionFiltersAttribute">
+            <summary>Represents a filter attribute that overrides exception filters defined at a higher level.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.OverrideExceptionFiltersAttribute.FiltersToOverride">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.OverrideResultFiltersAttribute">
+            <summary>Represents a filter attribute that overrides result filters defined at a higher level.</summary>
+        </member>
+        <member name="P:System.Web.Mvc.OverrideResultFiltersAttribute.FiltersToOverride">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Web.Mvc.RouteAreaAttribute">
+            <summary>
+            Defines the area to set for all the routes defined in this controller.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.RouteAreaAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.RouteAreaAttribute" /> class.
+            </summary>
+            <remarks>An attempt will be made to infer the area name from the target controller's namespace.</remarks>
+        </member>
+        <member name="M:System.Web.Mvc.RouteAreaAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.RouteAreaAttribute" /> class.
+            </summary>
+            <param name="areaName">The name of the area. 
+            If the value is null, an attempt will be made to infer the area name from the target controller's namespace.
+            </param>
+        </member>
+        <member name="P:System.Web.Mvc.RouteAreaAttribute.AreaName">
+            <summary>
+            The area name to set for all the routes defined in the controller.
+            If the value is null, an attempt will be made to infer the area name from the target controller's namespace.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.RouteAreaAttribute.AreaPrefix">
+            <summary>
+            The URL prefix to apply to the routes of this area. Defaults to the area's name.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.RouteCollectionAttributeRoutingExtensions.MapMvcAttributeRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            Maps the attribute-defined routes for the application.
+            </summary>
+            <param name="routes"></param>
+        </member>
+        <member name="M:System.Web.Mvc.RouteCollectionAttributeRoutingExtensions.MapMvcAttributeRoutes(System.Web.Routing.RouteCollection,System.Web.Mvc.Routing.IInlineConstraintResolver)">
+            <summary>
+            Maps the attribute-defined routes for the application.
+            </summary>
+            <param name="routes"></param>
+            <param name="constraintResolver">
+            The <see cref="T:System.Web.Mvc.Routing.IInlineConstraintResolver"/> to use for resolving inline constraints in route templates.
+            </param>
+        </member>
+        <member name="M:System.Web.Mvc.RouteCollectionAttributeRoutingExtensions.MapMvcAttributeRoutes(System.Web.Routing.RouteCollection,System.Web.Mvc.Routing.IDirectRouteProvider)">
+            <summary>
+            Maps the attribute-defined routes for the application.
+            </summary>
+            <param name="routes"></param>
+            <param name="directRouteProvider">
+            The <see cref="T:System.Web.Mvc.Routing.IDirectRouteProvider"/> to use for mapping routes.
+            </param>
+        </member>
+        <member name="M:System.Web.Mvc.RouteCollectionAttributeRoutingExtensions.MapMvcAttributeRoutes(System.Web.Routing.RouteCollection,System.Web.Mvc.Routing.IInlineConstraintResolver,System.Web.Mvc.Routing.IDirectRouteProvider)">
+            <summary>
+            Maps the attribute-defined routes for the application.
+            </summary>
+            <param name="routes"></param>
+            <param name="constraintResolver">
+            The <see cref="T:System.Web.Mvc.Routing.IInlineConstraintResolver"/> to use for resolving inline constraints in route templates.
+            </param>
+            <param name="directRouteProvider">
+            The <see cref="T:System.Web.Mvc.Routing.IDirectRouteProvider"/> to use for mapping routes.
+            </param>
+        </member>
+        <member name="T:System.Web.Mvc.RoutePrefixAttribute">
+            <summary>
+            Annotates a controller with a route prefix that applies to all actions within the controller.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.RoutePrefixAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.RoutePrefixAttribute" /> class without specifying any parameters.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.RoutePrefixAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.RoutePrefixAttribute" /> class.
+            </summary>
+            <param name="prefix">The route prefix for the controller.</param>
+        </member>
+        <member name="P:System.Web.Mvc.RoutePrefixAttribute.Prefix">
+            <summary>
+            Gets the route prefix.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.RemoteAttribute.#ctor(System.String,System.String,System.Web.Mvc.AreaReference)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.RemoteAttribute"/> class.
+            </summary>
+            <param name="action">The route name.</param>
+            <param name="controller">The name of the controller.</param>
+            <param name="areaReference">
+            Find the controller in the root if <see cref="F:System.Web.Mvc.AreaReference.UseRoot"/>. Otherwise look in the current area.
+            </param>
+        </member>
+        <member name="F:System.Web.Mvc.DependencyResolver._currentCache">
+            <summary>
+            Cache should always be a new CacheDependencyResolver(_current).
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.DependencyResolver.InnerCurrentCache">
+            <summary>
+            Provides caching over results returned by Current.
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.DependencyResolver.CacheDependencyResolver">
+            <summary>
+            Wraps an IDependencyResolver and ensures single instance per-type.
+            </summary>
+            <remarks>
+            Note it's possible for multiple threads to race and call the _resolver service multiple times.
+            We'll pick one winner and ignore the others and still guarantee a unique instance.
+            </remarks>
+        </member>
+        <member name="T:System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper">
+            <remarks>
+            Server.Execute() requires that the provided IHttpHandler subclass Page.
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.NameValueCollectionValueProvider.#ctor(System.Collections.Specialized.NameValueCollection,System.Collections.Specialized.NameValueCollection,System.Globalization.CultureInfo,System.Boolean)">
+            <summary>
+            Initializes Name Value collection provider.
+            </summary>
+            <param name="collection">Key value collection from request.</param>
+            <param name="unvalidatedCollection">Unvalidated key value collection from the request.</param>
+            <param name="culture">Culture with which the values are to be used.</param>
+            <param name="jQueryToMvcRequestNormalizationRequired">jQuery POST when sending complex Javascript 
+            objects to server does not encode in the way understandable by MVC. This flag should be set
+            if the request should be normalized to MVC form - https://aspnetwebstack.codeplex.com/workitem/1564. </param>
+        </member>
+        <member name="T:System.Web.Mvc.IValueProvider">
+            <summary>
+            Defines the methods that are required for a value provider in ASP.NET MVC.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.IValueProvider.ContainsPrefix(System.String)">
+            <summary>
+            Determines whether the collection contains the specified prefix.
+            </summary>
+            <param name="prefix">The prefix to search for.</param>
+            <returns>true if the collection contains the specified prefix; otherwise, false.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.IValueProvider.GetValue(System.String)">
+            <summary>
+            Retrieves a value object using the specified key.
+            </summary>
+            <param name="key">The key of the value object to retrieve.</param>
+            <returns>The value object for the specified key. If the exact key is not found, null.</returns>
+        </member>
+        <member name="T:System.Web.Mvc.DataAnnotationsModelValidatorProvider">
+            <summary>
+            An implementation of <see cref="T:System.Web.Mvc.ModelValidatorProvider"/> which providers validators
+            for attributes which derive from <see cref="T:System.ComponentModel.DataAnnotations.ValidationAttribute"/>. It also provides
+            a validator for types which implement <see cref="T:System.ComponentModel.DataAnnotations.IValidatableObject"/>. To support
+            client side validation, you can either register adapters through the static methods
+            on this class, or by having your validation attributes implement
+            <see cref="T:System.Web.Mvc.IClientValidatable"/>. The logic to support IClientValidatable
+            is implemented in <see cref="T:System.Web.Mvc.DataAnnotationsModelValidator"/>.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.DataAnnotationsModelValidatorProvider.RegisterValidatableObjectAdapter(System.Type,System.Type)">
+            <summary>
+            Registers an adapter type for the given <paramref name="modelType"/>, which must
+            implement <see cref="T:System.ComponentModel.DataAnnotations.IValidatableObject"/>. The adapter type must derive from
+            <see cref="T:System.Web.Mvc.ModelValidator"/> and it must contain a public constructor
+            which takes two parameters of types <see cref="T:System.Web.Mvc.ModelMetadata"/> and
+            <see cref="T:System.Web.Mvc.ControllerContext"/>.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.DataAnnotationsModelValidatorProvider.RegisterValidatableObjectAdapterFactory(System.Type,System.Web.Mvc.DataAnnotationsValidatableObjectAdapterFactory)">
+            <summary>
+            Registers an adapter factory for the given <paramref name="modelType"/>, which must
+            implement <see cref="T:System.ComponentModel.DataAnnotations.IValidatableObject"/>.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.DataAnnotationsModelValidatorProvider.RegisterDefaultValidatableObjectAdapter(System.Type)">
+            <summary>
+            Registers the default adapter type for objects which implement
+            <see cref="T:System.ComponentModel.DataAnnotations.IValidatableObject"/>. The adapter type must derive from
+            <see cref="T:System.Web.Mvc.ModelValidator"/> and it must contain a public constructor
+            which takes two parameters of types <see cref="T:System.Web.Mvc.ModelMetadata"/> and
+            <see cref="T:System.Web.Mvc.ControllerContext"/>.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.DataAnnotationsModelValidatorProvider.RegisterDefaultValidatableObjectAdapterFactory(System.Web.Mvc.DataAnnotationsValidatableObjectAdapterFactory)">
+            <summary>
+            Registers the default adapter factory for objects which implement
+            <see cref="T:System.ComponentModel.DataAnnotations.IValidatableObject"/>.
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.ModelMetadata._additionalValues">
+            <summary>
+            Explicit backing store for the things we want initialized by default, so don't have to call
+            the protected virtual setters of an auto-generated property
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.ModelMetadata.Container">
+            <summary>
+            A reference to the model's container object. Will be non-null if the model represents a property.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.ActionMethodSelectorAttribute.IsValidForRequest(System.Web.Mvc.ControllerContext,System.Reflection.MethodInfo)">
+            <summary>
+            Determines whether the action method selection is valid for the specified controller context.
+            </summary>
+            <param name="controllerContext">The controller context.</param>
+            <param name="methodInfo">Information about the action method.</param>
+            <returns><see langword="true"/> if the action method selection is valid for the specified controller context; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="F:System.Web.Mvc.Ajax.InsertionMode.Replace">
+            <summary>
+            Replace the contents of the element.
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.Ajax.InsertionMode.InsertBefore">
+            <summary>
+            Insert before the element.
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.Ajax.InsertionMode.InsertAfter">
+            <summary>
+            Insert after the element.
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.Ajax.InsertionMode.ReplaceWith">
+            <summary>
+            Replace the entire element.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.ViewContext.ValidationSummaryMessageElement">
+            <summary>
+            Element name used to wrap a top-level message generated by
+            <see cref="M:System.Web.Mvc.Html.ValidationExtensions.ValidationSummary(System.Web.Mvc.HtmlHelper)"/> and other overloads.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.ViewContext.ValidationMessageElement">
+            <summary>
+            Element name used to wrap a top-level message generated by
+            <see cref="M:System.Web.Mvc.Html.ValidationExtensions.ValidationMessage(System.Web.Mvc.HtmlHelper,System.String)"/> and other overloads.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.SelectListItem.Disabled">
+            <summary>
+            Gets or sets a value that indicates whether this <see cref="T:System.Web.Mvc.SelectListItem"/> is disabled.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.SelectListItem.Group">
+            <summary>
+            Represents the optgroup HTML element this item is wrapped into.
+            In a select list, multiple groups with the same name are supported.
+            They are compared with reference equality.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Controller.Resolver">
+            <summary>
+            Represents a replaceable dependency resolver providing services.
+            By default, it uses the <see cref="P:System.Web.Mvc.DependencyResolver.CurrentCache"/>. 
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Controller.DisableAsyncSupport">
+            <summary>
+            This is for backwards compat. MVC 4.0 starts allowing Controller to support asynchronous patterns.
+            This means ExecuteCore doesn't get called on derived classes. Derived classes can override this
+            flag and set to true if they still need ExecuteCore to be called.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.JsonResult.MaxJsonLength">
+            <summary>
+            When set MaxJsonLength passed to the JavaScriptSerializer.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.JsonResult.RecursionLimit">
+            <summary>
+            When set RecursionLimit passed to the JavaScriptSerializer.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.MultiSelectList.#ctor(System.Collections.IEnumerable,System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the MultiSelectList class by using the items to include in the list, 
+            the selected values, the disabled values.
+            </summary>
+            <param name="items">The items used to build each <see cref="T:System.Web.Mvc.SelectListItem"/> of the list.</param>
+            <param name="selectedValues">The selected values field. Used to match the Selected property of the 
+            corresponding <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="disabledValues">The disabled values. Used to match the Disabled property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>>
+        </member>
+        <member name="M:System.Web.Mvc.MultiSelectList.#ctor(System.Collections.IEnumerable,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the MultiSelectList class by using the items to include in the list, 
+            the data value field, the data text field, and the data group field.
+            </summary>
+            <param name="items">The items used to build each <see cref="T:System.Web.Mvc.SelectListItem"/> of the list.</param>
+            <param name="dataValueField">The data value field. Used to match the Value property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataTextField">The data text field. Used to match the Text property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataGroupField">The data group field. Used to match the Group property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+        </member>
+        <member name="M:System.Web.Mvc.MultiSelectList.#ctor(System.Collections.IEnumerable,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the MultiSelectList class by using the items to include in the list, 
+            the data value field, the data text field, the selected values, and the disabled values.
+            </summary>
+            <param name="items">The items used to build each <see cref="T:System.Web.Mvc.SelectListItem"/> of the list.</param>
+            <param name="dataValueField">The data value field. Used to match the Value property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataTextField">The data text field. Used to match the Text property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="selectedValues">The selected values field. Used to match the Selected property of the 
+            corresponding <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="disabledValues">The disabled values. Used to match the Disabled property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>>
+        </member>
+        <member name="M:System.Web.Mvc.MultiSelectList.#ctor(System.Collections.IEnumerable,System.String,System.String,System.String,System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the MultiSelectList class by using the items to include in the list, 
+            the data value field, the data text field, the data group field, and the selected values.
+            </summary>
+            <param name="items">The items used to build each <see cref="T:System.Web.Mvc.SelectListItem"/> of the list.</param>
+            <param name="dataValueField">The data value field. Used to match the Value property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataTextField">The data text field. Used to match the Text property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataGroupField">The data group field. Used to match the Group property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="selectedValues">The selected values field. Used to match the Selected property of the 
+            corresponding <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+        </member>
+        <member name="M:System.Web.Mvc.MultiSelectList.#ctor(System.Collections.IEnumerable,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the MultiSelectList class by using the items to include in the list,
+            the data value field, the data text field, the data group field, the selected values, and the disabled
+            values.
+            </summary>
+            <param name="items">The items used to build each <see cref="T:System.Web.Mvc.SelectListItem"/> of the list.</param>
+            <param name="dataValueField">The data value field. Used to match the Value property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataTextField">The data text field. Used to match the Text property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataGroupField">The data group field. Used to match the Group property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="selectedValues">The selected values field. Used to match the Selected property of the 
+            corresponding <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="disabledValues">The disabled values. Used to match the Disabled property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+        </member>
+        <member name="M:System.Web.Mvc.MultiSelectList.#ctor(System.Collections.IEnumerable,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the MultiSelectList class by using the items to include in the list, 
+            the data value field, the data text field, the data group field, the selected values, the disabled values,
+            and the disabled groups.
+            </summary>
+            <param name="items">The items used to build each <see cref="T:System.Web.Mvc.SelectListItem"/> of the list.</param>
+            <param name="dataValueField">The data value field. Used to match the Value property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataTextField">The data text field. Used to match the Text property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataGroupField">The data group field. Used to match the Group property of the corresponding 
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="selectedValues">The selected values field. Used to match the Selected property of the 
+            corresponding <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="disabledValues">The disabled values. Used to match the Disabled property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="disabledGroups">The disabled groups. Used to match the Disabled property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListGroup"/>.</param>
+        </member>
+        <member name="P:System.Web.Mvc.MultiSelectList.DataGroupField">
+            <summary>
+            Gets the data group field.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.MultiSelectList.DisabledGroups">
+            <summary>
+            Gets the disabled groups.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.MultiSelectList.DisabledValues">
+            <summary>
+            Gets the disabled values.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.HtmlHelper.ValidationSummaryMessageElement">
+            <summary>
+            Element name used to wrap a top-level message in
+            <see cref="M:System.Web.Mvc.Html.ValidationExtensions.ValidationSummary(System.Web.Mvc.HtmlHelper)"/> and other overloads.
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.HtmlHelper.ValidationMessageElement">
+            <summary>
+            Element name used to wrap the validation message generated by
+            <see cref="M:System.Web.Mvc.Html.ValidationExtensions.ValidationMessage(System.Web.Mvc.HtmlHelper,System.String)"/> and other overloads.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.HtmlHelper.AnonymousObjectToHtmlAttributes(System.Object)">
+            <summary>
+            Creates a dictionary of HTML attributes from the input object, 
+            translating underscores to dashes.
+            </summary>
+            <example>
+            <c>new { data_name="value" }</c> will translate to the entry <c>{ "data-name" , "value" }</c>
+            in the resulting dictionary.
+            </example>
+            <param name="htmlAttributes">Anonymous object describing HTML attributes.</param>
+            <returns>A dictionary that represents HTML attributes.</returns>
+        </member>
+        <member name="P:System.Web.Mvc.HtmlHelper.Html5DateRenderingMode">
+            <summary>
+            Set this property to <see cref="F:System.Web.Mvc.Html5DateRenderingMode.Rfc3339"/> to have templated helpers such as Html.EditorFor render date and time
+            values as Rfc3339 compliant strings.
+            </summary>
+            <remarks>
+            The scope of this setting is for the current view alone. Sub views and parent views
+            will default to <see cref="F:System.Web.Mvc.Html5DateRenderingMode.CurrentCulture"/> unless explicitly set otherwise.
+            </remarks>
+        </member>
+        <member name="M:System.Web.Mvc.HtmlHelper.Raw(System.String)">
+            <summary>
+            Wraps HTML markup in an IHtmlString, which will enable HTML markup to be
+            rendered to the output without getting HTML encoded.
+            </summary>
+            <param name="value">HTML markup string.</param>
+            <returns>An IHtmlString that represents HTML markup.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.HtmlHelper.Raw(System.Object)">
+            <summary>
+            Wraps HTML markup from the string representation of an object in an IHtmlString,
+            which will enable HTML markup to be rendered to the output without getting HTML encoded.
+            </summary>
+            <param name="value">object with string representation as HTML markup</param>
+            <returns>An IHtmlString that represents HTML markup.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.HtmlHelper.SetValidationSummaryMessageElement(System.String)">
+            <summary>
+            Set element name used to wrap a top-level message in
+            <see cref="M:System.Web.Mvc.Html.ValidationExtensions.ValidationSummary(System.Web.Mvc.HtmlHelper)"/> and other overloads.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.HtmlHelper.SetValidationMessageElement(System.String)">
+            <summary>
+            Set element name used to wrap the validation message generated by
+            <see cref="M:System.Web.Mvc.Html.ValidationExtensions.ValidationMessage(System.Web.Mvc.HtmlHelper,System.String)"/> and other overloads.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.HtmlHelper.ObjectToDictionary(System.Object)">
+            <summary>
+            Creates a dictionary from an object, by adding each public instance property as a key with its associated 
+            value to the dictionary. It will expose public properties from derived types as well. This is typically used
+            with objects of an anonymous type.
+            </summary>
+            <example>
+            <c>new { property_name = "value" }</c> will translate to the entry <c>{ "property_name" , "value" }</c>
+            in the resulting dictionary.
+            </example>
+            <param name="value">The object to be converted.</param>
+            <returns>The created dictionary of property names and property values.</returns>
+        </member>
+        <member name="M:System.Web.Mvc.RouteCollectionExtensions.CreateRouteValueDictionaryUncached(System.Object)">
+            <summary>
+            The callers to this method are used at startup only, thus it's a bit better to use
+            the uncached method because it will run faster for the first few times, and will not
+            consume memory long term.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.SelectList.#ctor(System.Collections.IEnumerable,System.Object,System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the SelectList class by using the specified items for the list,
+            the selected value, and the disabled values.
+            </summary>
+            <param name="items">The items used to build each <see cref="T:System.Web.Mvc.SelectListItem"/> of the list.</param>
+            <param name="selectedValue">The selected value. Used to match the Selected property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="disabledValues">The disabled values. Used to match the Disabled property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+        </member>
+        <member name="M:System.Web.Mvc.SelectList.#ctor(System.Collections.IEnumerable,System.String,System.String,System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the SelectList class by using the specified items for the list,
+            the data value field, the data text field, the data group field, and the selected value.
+            </summary>
+            <param name="items">The items used to build each <see cref="T:System.Web.Mvc.SelectListItem"/> of the list.</param>
+            <param name="dataValueField">The data value field. Used to match the Value property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataTextField">The data text field. Used to match the Text property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataGroupField">The data group field. Used to match the Group property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="selectedValue">The selected value. Used to match the Selected property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+        </member>
+        <member name="M:System.Web.Mvc.SelectList.#ctor(System.Collections.IEnumerable,System.String,System.String,System.Object,System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the SelectList class by using the specified items for the list,
+            the data value field, the data text field, the selected value, and the disabled values.
+            </summary>
+            <param name="items">The items used to build each <see cref="T:System.Web.Mvc.SelectListItem"/> of the list.</param>
+            <param name="dataValueField">The data value field. Used to match the Value property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataTextField">The data text field. Used to match the Text property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="selectedValue">The selected value. Used to match the Selected property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="disabledValues">The disabled values. Used to match the Disabled property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+        </member>
+        <member name="M:System.Web.Mvc.SelectList.#ctor(System.Collections.IEnumerable,System.String,System.String,System.String,System.Object,System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the SelectList class by using the specified items for the list,
+            the data value field, the data text field, the data group field, the selected value, and the disabled
+            values.
+            </summary>
+            <param name="items">The items used to build each <see cref="T:System.Web.Mvc.SelectListItem"/> of the list.</param>
+            <param name="dataValueField">The data value field. Used to match the Value property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataTextField">The data text field. Used to match the Text property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataGroupField">The data group field. Used to match the Group property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="selectedValue">The selected value. Used to match the Selected property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="disabledValues">The disabled values. Used to match the Disabled property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+        </member>
+        <member name="M:System.Web.Mvc.SelectList.#ctor(System.Collections.IEnumerable,System.String,System.String,System.String,System.Object,System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the SelectList class by using the specified items for the list,
+            the data value field, the data text field, the data group field. the selected value, the disabled values,
+            and the disabled groups.
+            </summary>
+            <param name="items">The items used to build each <see cref="T:System.Web.Mvc.SelectListItem"/> of the list.</param>
+            <param name="dataValueField">The data value field. Used to match the Value property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataTextField">The data text field. Used to match the Text property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="dataGroupField">The data group field. Used to match the Group property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="selectedValue">The selected value. Used to match the Selected property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="disabledValues">The disabled values. Used to match the Disabled property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListItem"/>.</param>
+            <param name="disabledGroups">The disabled groups. Used to match the Disabled property of the corresponding
+            <see cref="T:System.Web.Mvc.SelectListGroup"/>.</param>
+        </member>
+        <member name="M:System.Web.Mvc.TypeHelpers.EnsureDebuggableException(System.MissingMethodException,System.String)">
+            <summary>
+            Provide a new <see cref="T:System.MissingMethodException"/> if original Message does not contain given full Type name.
+            </summary>
+            <param name="originalException"><see cref="T:System.MissingMethodException"/> to check.</param>
+            <param name="fullTypeName">Full Type name which Message should contain.</param>
+            <returns>New <see cref="T:System.MissingMethodException"/> if an update is required; null otherwise.</returns>
+        </member>
+        <member name="F:System.Web.Mvc.UrlHelper.HttpRouteKey">
+            <summary>
+            Key used to signify that a route URL generation request should include HTTP routes (e.g. Web API).
+            If this key is not specified then no HTTP routes will match.
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.UrlHelper.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Web.Mvc.UrlHelper"/> class.
+            </summary>
+            <remarks>The default constructor is intended for use by unit testing only.</remarks>
+        </member>
+        <member name="T:System.Threading.Tasks.TaskHelpers">
+            <summary>
+            Helpers for safely using Task libraries. 
+            </summary>
+        </member>
+        <member name="M:System.Threading.Tasks.TaskHelpers.Canceled">
+            <summary>
+            Returns a canceled Task. The task is completed, IsCanceled = True, IsFaulted = False.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Tasks.TaskHelpers.Canceled``1">
+            <summary>
+            Returns a canceled Task of the given type. The task is completed, IsCanceled = True, IsFaulted = False.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Tasks.TaskHelpers.Completed">
+            <summary>
+            Returns a completed task that has no result. 
+            </summary>        
+        </member>
+        <member name="M:System.Threading.Tasks.TaskHelpers.FromError(System.Exception)">
+            <summary>
+            Returns an error task. The task is Completed, IsCanceled = False, IsFaulted = True
+            </summary>
+        </member>
+        <member name="M:System.Threading.Tasks.TaskHelpers.FromError``1(System.Exception)">
+            <summary>
+            Returns an error task of the given type. The task is Completed, IsCanceled = False, IsFaulted = True
+            </summary>
+            <typeparam name="TResult"></typeparam>
+        </member>
+        <member name="T:System.Threading.Tasks.TaskHelpers.AsyncVoid">
+            <summary>
+            Used as the T in a "conversion" of a Task into a Task{T}
+            </summary>
+        </member>
+        <member name="T:System.Threading.Tasks.TaskHelpers.CancelCache`1">
+            <summary>
+            This class is a convenient cache for per-type cancelled tasks
+            </summary>
+        </member>
+        <member name="M:System.Threading.Tasks.TaskHelpersExtensions.CastToObject(System.Threading.Tasks.Task)">
+            <summary>
+            Cast Task to Task of object
+            </summary>
+        </member>
+        <member name="M:System.Threading.Tasks.TaskHelpersExtensions.CastToObject``1(System.Threading.Tasks.Task{``0})">
+            <summary>
+            Cast Task of T to Task of object
+            </summary>
+        </member>
+        <member name="M:System.Threading.Tasks.TaskHelpersExtensions.ThrowIfFaulted(System.Threading.Tasks.Task)">
+            <summary>
+            Throws the first faulting exception for a task which is faulted. It preserves the original stack trace when
+            throwing the exception. Note: It is the caller's responsibility not to pass incomplete tasks to this
+            method, because it does degenerate into a call to the equivalent of .Wait() on the task when it hasn't yet
+            completed.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Tasks.TaskHelpersExtensions.TryGetResult``1(System.Threading.Tasks.Task{``0},``0@)">
+            <summary>
+            Attempts to get the result value for the given task. If the task ran to completion, then
+            it will return true and set the result value; otherwise, it will return false.
+            </summary>
+        </member>
+    </members>
+</doc>
