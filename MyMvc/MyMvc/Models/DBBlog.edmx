@@ -20,6 +20,7 @@
           <Property Name="id" Type="nvarchar" MaxLength="36" Nullable="false" />
           <Property Name="userid" Type="nvarchar" MaxLength="36" Nullable="false" />
           <Property Name="c_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="c_desc" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -70,6 +71,7 @@
           <Property Name="id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
           <Property Name="userid" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
           <Property Name="c_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="c_desc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -100,6 +102,7 @@
           <EntitySetMapping Name="categories">
             <EntityTypeMapping TypeName="DBBlogModel.category">
               <MappingFragment StoreEntitySet="category">
+                <ScalarProperty Name="c_desc" ColumnName="c_desc" />
                 <ScalarProperty Name="c_name" ColumnName="c_name" />
                 <ScalarProperty Name="userid" ColumnName="userid" />
                 <ScalarProperty Name="id" ColumnName="id" />

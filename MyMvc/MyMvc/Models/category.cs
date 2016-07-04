@@ -17,5 +17,6 @@ namespace MyMvc.Models
         public string id { get; set; }
         public string userid { get; set; }
         public string c_name { get; set; }
+        public string c_desc { get; set; }
     }
 }

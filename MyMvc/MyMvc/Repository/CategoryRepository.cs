@@ -19,5 +19,14 @@ namespace MyMvc.Repository
 
             return categorys;
         }
+
+        public bool AddFromCreateModel(CreateCategoryModel cModel)
+        {
+            UserRepository user = new UserRepository();
+            User u = user.FindByName(Global.GlobalInfo.UserName);
+            dbContext.categories.Add(new category { id = Guid.NewGuid().ToString(), userid = u.id, c_name = cModel.CategoryName,c_desc=cModel.CategoryDesc });
+            if (dbContext.SaveChanges() > 0) return true;
+            else return false;
+        }
     }
 }

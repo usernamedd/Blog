@@ -24,6 +24,7 @@
     <EntitySetMapping Name="categories">
       <EntityTypeMapping TypeName="DBBlogModel.category">
         <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="c_desc" ColumnName="c_desc" />
           <ScalarProperty Name="c_name" ColumnName="c_name" />
           <ScalarProperty Name="userid" ColumnName="userid" />
           <ScalarProperty Name="id" ColumnName="id" />

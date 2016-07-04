@@ -15,6 +15,7 @@
     <Property Name="id" Type="nvarchar" MaxLength="36" Nullable="false" />
     <Property Name="userid" Type="nvarchar" MaxLength="36" Nullable="false" />
     <Property Name="c_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="c_desc" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="User">
     <Key>

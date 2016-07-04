@@ -16,19 +16,31 @@
     <div>
         <h4>category</h4>
         <hr />
-        <table class="table-bordered">
+        <table class="table-striped">
             @if (ViewBag.Categorys != null)
             {
-                foreach (var c in ViewBag.Categorys)
-                {
-                    <caption>c.title;</caption>
-                }
+                <thead>
+                    <th>
+                        <td>标题</td>
+                        <td>描述</td>
+                    </th>
+                </thead>
+                <tbody>
+                    @foreach (var c in ViewBag.Categorys)
+                    {
+                    <tr>
+                        <td>@c.c_name</td>
+                        <td>@c.c_desc</td>
+                    </tr>
+                    }
+                </tbody>
             }
         </table>
         <div class="nav-divider">
             <form class="form-group" action="CreateCategory" method="post">
                 <legend>标签名称</legend>
-                <input type="text" placeholder=请输入文字…" name="title"/>
+                <input type="text" placeholder="标题…" name="CategoryName"/>
+                <input type="text" placeholder="描述…" name="CategoryDesc" />
                 <button type="submit" class="btn">注册</button>
             </form>
         </div>

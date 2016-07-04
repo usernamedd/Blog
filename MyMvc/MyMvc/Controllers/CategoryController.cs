@@ -24,6 +24,8 @@ namespace MyMvc.Controllers
         [HttpPost]
         public ActionResult CreateCategory(CreateCategoryModel category)
         {
+            //添加数据库操作
+            categoryRep.AddFromCreateModel(category);
             return RedirectToAction("CategoryMgr");
         }
 
@@ -32,7 +34,8 @@ namespace MyMvc.Controllers
             //没有用户登录的话则不向视图传递数据
             if(string.IsNullOrEmpty(Global.GlobalInfo.UserName))
             {
-                return View();
+                return RedirectToAction("NoUserLogin", "Error");
+                //return View();
             }
             //如果登录了的话，则向视图传递当前用户下的分类信息
             List<category> categorys = new List<category>();

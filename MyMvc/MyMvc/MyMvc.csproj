@@ -148,6 +148,8 @@
     <Content Include="scripts\bootstrap\bootstrap.js" />
     <Content Include="scripts\bootstrap\bootstrap.min.js" />
     <Content Include="scripts\bootstrap\npm.js" />
+    <Content Include="scripts\jquery-1.8.3.min.js" />
+    <Content Include="scripts\jquery-ui-1.9.2.custom.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +157,7 @@
     <Compile Include="Common\CheckCodeGenerator.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -214,6 +217,7 @@
     <Content Include="Views\Category\CategoryMgr.cshtml" />
     <Content Include="CSS\bootstrap\bootstrap-theme.css.map" />
     <Content Include="CSS\bootstrap\bootstrap.css.map" />
+    <Content Include="Views\Error\NoUserLogin.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

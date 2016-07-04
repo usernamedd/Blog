@@ -94,7 +94,7 @@ namespace MyMvc.Controllers
             HttpCookie _cookie = new HttpCookie("User");
             _cookie.Values.Add("UserName", loginModel.UserName);
             _cookie.Values.Add("Password", loginModel.Password);
-            _cookie.Expires = DateTime.Now.AddMinutes(1);//设置Cookie的过期时间,这里可能需要获取客户端的时间而不应该用服务器的时间
+            _cookie.Expires = DateTime.Now.AddMinutes(10);//设置Cookie的过期时间,这里可能需要获取客户端的时间而不应该用服务器的时间
             Response.Cookies.Add(_cookie);
 
             if (Request.QueryString["ReturnUrl"] != null) return Redirect(Request.QueryString["ReturnUrl"]);

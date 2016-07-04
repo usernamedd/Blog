@@ -9,5 +9,7 @@ namespace MyMvc.Models
     {
         public string CategoryName
         { get; set; }
+        public string CategoryDesc
+        { get; set; }
     }
 }

@@ -30,5 +30,6 @@
     <Property Name="id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
     <Property Name="userid" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
     <Property Name="c_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="c_desc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>
