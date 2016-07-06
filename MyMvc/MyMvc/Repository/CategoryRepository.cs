@@ -28,5 +28,20 @@ namespace MyMvc.Repository
             if (dbContext.SaveChanges() > 0) return true;
             else return false;
         }
+
+        public override bool Update(category Tmodel)
+        {
+            dbContext.categories.Attach(Tmodel);
+            dbContext.Entry(Tmodel).State = System.Data.Entity.EntityState.Modified;
+            try
+            {
+                dbContext.SaveChanges();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            return true;
+        }
     }
 }
